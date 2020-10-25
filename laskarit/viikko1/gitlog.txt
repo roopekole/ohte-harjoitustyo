@@ -1,0 +1,108 @@
+HUOM!! Sisältää yhden ylimääräisen virheellisen commitin, josta palautettiin 
+edelliseen committiin.
+
+$ git log --stat | cat
+commit 9160694fcd754a4b6e3da6e472338858d6932c01
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 11:07:44 2020 +0200
+
+    Perutaan commit - sitä ei pitänytkään tehdä tehtävässä
+
+ tiedostoja/file3 | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit e441a1f3110c08461c2adbef9c1efc0926294c13
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 10:43:33 2020 +0200
+
+    Lisätty hakemisto 'tiedostoja' sisältöineen
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f508c01130a7b3bc74a3707f52a3c419e3c85410
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 10:02:27 2020 +0200
+
+    Sisältö muutos tiedostoihin eka.txt ja kolmas.txt
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 32388119ee2559157f88b32981b8d8dffef53f1e
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 10:00:52 2020 +0200
+
+    Nimetään tiedosto.txt > eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8ca7d89911654965f73cc7e64ed4eedce44e6994
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:58:02 2020 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit cbd7d23f4cbc02150dd4f44081c6c40fa887f7bf
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:56:08 2020 +0200
+
+    Muutettu tiedosto.txt sisältöä
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1026b1775393433ca42fd6d60844ad88366c9517
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:55:19 2020 +0200
+
+    Muutettu tiedosto.txt sisältöä
+
+ tiedosto.txt | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit 6671f54a95852346bdb3e85873e3568434c2ae56
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:50:42 2020 +0200
+
+    Lisätty hakemisto stuff sisältöineen
+
+ stuff/file1.txt | 0
+ stuff/file2.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c76f5c5f0e5d0f595f5476fadbe4cabf5bd69238
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:49:23 2020 +0200
+
+    Muutettu toinen.txt ja kolmas.txt sisältöä
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 72d878229a892ac668f394ec2dc2163fcfac6a1f
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:46:51 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 2fd2c4529d0e6c65bd66f3e553943894a0a180ce
+Author: Roope Kolehmainen <roope.kolehmainen@helsinki.fi>
+Date:   Sun Oct 25 09:44:57 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
