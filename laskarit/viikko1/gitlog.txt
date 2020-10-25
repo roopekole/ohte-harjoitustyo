@@ -1,5 +1,3 @@
-Muutostestaus
-
 HUOM!! Sisältää yhden ylimääräisen virheellisen commitin, josta palautettiin 
 edelliseen committiin.
 
