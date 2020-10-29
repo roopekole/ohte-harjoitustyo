@@ -10,4 +10,4 @@ Tähän repositorioon tehdään *Helsingin yliopiston* tietojenkäsittelyn tutki
 
 
 ### Viikko 2
-* Haarautumiskattavuus-kuvakaappaus: [komentorivi.txt](https://github.com/roopekole/ohte-harjoitustyo/blob/master/laskarit/viikko2/test_coverage_summary.PNG)
+* Haarautumiskattavuus-kuvakaappaus: [test_coverage_summary.PNG](https://github.com/roopekole/ohte-harjoitustyo/blob/master/laskarit/viikko2/test_coverage_summary.PNG)
