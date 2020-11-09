@@ -2,6 +2,8 @@
 
 Tähän repositorioon tehdään *Helsingin yliopiston* tietojenkäsittelyn tutkinto-ohjelman kurssin **Ohjelmistotekniikka** palautukset.
 
+Repositorion tehtävä- ja harjoitustyöpalautukset vastaavat kurssin Python-toteutusversiota.
+
 ## Tehtäväpalautukset
 Tehtäväpalautusten juurihakemisto on [https://github.com/roopekole/ohte-harjoitustyo/tree/master/laskarit](https://github.com/roopekole/ohte-harjoitustyo/tree/master/laskarit)
 
