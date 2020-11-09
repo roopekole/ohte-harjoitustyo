@@ -17,6 +17,8 @@ Tehtäväpalautusten juurihakemisto on [https://github.com/roopekole/ohte-harjoi
 ## Harjoitustyöpalautukset
 Harjoitustyö juurihakemisto on [https://github.com/roopekole/ohte-harjoitustyo/tree/master/app](https://github.com/roopekole/ohte-harjoitustyo/tree/master/app)
 
+Harjoitustyön dokumentaatio löytyy täältä: [https://github.com/roopekole/ohte-harjoitustyo/tree/master/app/documentation](https://github.com/roopekole/ohte-harjoitustyo/tree/master/app/documentation)
+
 ### Viikko 2
 * Alustava vaatimusmäärittley: [https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/application_requirements.md](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/application_requirements.md)
 * Työaikakirjanpito: [https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md)
