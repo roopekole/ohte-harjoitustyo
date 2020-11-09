@@ -1,9 +1,9 @@
-# Työaikakirjanpito
+# Work hour log
 
-| päivä | aika | mitä tein  |
+| Date (dd.mm) | Hours | Description  |
 | :----:|:-----| :-----|
 | 29.10. | 2    | Generic ideation and library familiarization |
-|       |     |  |
+| 8.11   |  1  | Preliminary requirement specification |
 | xx    |     |  |
 |       |     |  |
 |       |     |  |
