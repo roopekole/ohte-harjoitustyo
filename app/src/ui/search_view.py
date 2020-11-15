@@ -1,7 +1,6 @@
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
-import document.document_functions as docfuncs
-
+from document.document_functions import DocumentFunctions as doc_funcs
 
 class SearchView:
     def __init__(self, root, handle_upload, handle_start):
@@ -16,7 +15,7 @@ class SearchView:
         self.initialize()
 
     def handle_search_button_click(self):
-        res = docfuncs.search(self.entry.get())
+        res = doc_funcs.search(self.entry.get())
         print(res)
 
     def initialize(self):
