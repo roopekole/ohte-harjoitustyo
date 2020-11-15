@@ -1,23 +1,27 @@
-from whoosh.fields import Schema, STORED, ID, KEYWORD, TEXT
+from time import sleep as sleep
+import tkinter as tk
+from tkinter import filedialog
+from document.document import Documents as doc
 import os.path
-from whoosh.index import create_in
+print("########################### \n"
+      "# Welcome to the test app # \n"
+      "###########################")
 
-schema = Schema(title=TEXT(stored=True), content=TEXT,
-                path=ID(stored=True), tags=KEYWORD, icon=STORED)
-
-if not os.path.exists("indexfiles"):
-    os.mkdir("indexfiles")
-ix = create_in("indexfiles", schema)
-writer = ix.writer()
-writer.add_document(title=u"First document", path=u"/a",
-                    content=u"This is the first document we've added!")
-writer.add_document(title=u"Second document", path=u"/a",
-                    content=u"This is the second document we've added!")
-writer.commit()
-
-from whoosh.qparser import QueryParser
-with ix.searcher() as searcher:
-    query = QueryParser("content", ix.schema).parse("add")
-    results = searcher.search(query)
-    for r in results:
-        print(r)
+var = input("Press [S] for search or [U] for upload, any other key to quit: ").lower()
+while var in ["s", "u"]:
+    if var == "s":
+        sleep(1)
+        print("Okay -- so you want to search")
+        sleep(1)
+        search_term = input("Give me a search string: ")
+        if(search_term):
+            doc.search(search_term)
+    if var == "u":
+        sleep(1)
+        print("Okay -- so you want to upload")
+        sleep(1)
+        root = tk.Tk()
+        root.withdraw()
+        from store.storage import Upload
+        Upload.upload(filedialog.askopenfilename())
+    var = input("Press [S] for search or [U] for upload, any other key to quit: ").lower()

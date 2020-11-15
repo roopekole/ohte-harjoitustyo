@@ -11,3 +11,4 @@ start = "python src/index.py"
 [packages]
 whoosh = "*"
 tkfilebrowser = "*"
+pytest = "*"
