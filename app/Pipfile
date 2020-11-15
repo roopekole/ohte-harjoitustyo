@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [scripts]
-start = "python src/run.py"
+start = "python3 src/run.py"
 test = "pytest"
 coverage = "coverage run --branch -m pytest"
 coverage-report = "coverage html"
