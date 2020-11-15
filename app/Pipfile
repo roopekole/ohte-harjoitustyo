@@ -4,7 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [scripts]
-start = "python src/index.py"
+start = "python src/run.py"
+test = "pytest"
+coverage = "coverage run --branch -m pytest"
+coverage-report = "coverage html"
+
 
 [dev-packages]
 
@@ -12,3 +16,4 @@ start = "python src/index.py"
 whoosh = "*"
 tkfilebrowser = "*"
 pytest = "*"
+coverage = "*"

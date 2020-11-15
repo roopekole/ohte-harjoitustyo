@@ -1,6 +1,6 @@
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
-from document.document import Documents as docs
+from document.document_functions import DocumentFunctions as doc_funcs
 from os import path
 
 class UploadView:
@@ -17,7 +17,7 @@ class UploadView:
     def handle_upload_button_click(self):
         filename = tkinter.filedialog.askopenfilename()
         #Upload the file to Whoosh index
-        docs.upload(filename)
+        doc_funcs.get_file_contents(filename)
         self.short_filename.set(path.basename(filename))
         self.long_filename.set(filename)
 

@@ -1,7 +1,7 @@
 from time import sleep as sleep
 import tkinter as tk
 from tkinter import filedialog
-from document.document import Documents as doc
+from document.document_functions import Documents as doc
 import os.path
 print("########################### \n"
       "# Welcome to the test app # \n"
