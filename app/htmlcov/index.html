@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">35%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">b</span>
+        <span class="key">p</span>
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+<div id="index">
+    <table class="index">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                <th class="shortkey_b">branches</th>
+                <th class="shortkey_p">partial</th>
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>30387</td>
+                <td>18064</td>
+                <td>91</td>
+                <td>10667</td>
+                <td>919</td>
+                <td class="right" data-ratio="14178 41054">35%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\__init__.py</a></td>
+                <td>5</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 5">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__argcomplete_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_argcomplete.py</a></td>
+                <td>37</td>
+                <td>23</td>
+                <td>0</td>
+                <td>12</td>
+                <td>1</td>
+                <td class="right" data-ratio="15 49">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__code___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_code\__init__.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__code_code_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_code\code.py</a></td>
+                <td>684</td>
+                <td>202</td>
+                <td>0</td>
+                <td>234</td>
+                <td>55</td>
+                <td class="right" data-ratio="603 918">66%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__code_source_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_code\source.py</a></td>
+                <td>140</td>
+                <td>39</td>
+                <td>0</td>
+                <td>59</td>
+                <td>15</td>
+                <td class="right" data-ratio="127 199">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__io___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_io\__init__.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__io_saferepr_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_io\saferepr.py</a></td>
+                <td>67</td>
+                <td>37</td>
+                <td>0</td>
+                <td>12</td>
+                <td>1</td>
+                <td class="right" data-ratio="31 79">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__io_terminalwriter_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_io\terminalwriter.py</a></td>
+                <td>112</td>
+                <td>31</td>
+                <td>0</td>
+                <td>52</td>
+                <td>14</td>
+                <td class="right" data-ratio="113 164">69%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__io_wcwidth_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_io\wcwidth.py</a></td>
+                <td>25</td>
+                <td>11</td>
+                <td>0</td>
+                <td>14</td>
+                <td>2</td>
+                <td class="right" data-ratio="18 39">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest__version_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\_version.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_assertion___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\assertion\__init__.py</a></td>
+                <td>84</td>
+                <td>25</td>
+                <td>0</td>
+                <td>30</td>
+                <td>7</td>
+                <td class="right" data-ratio="66 114">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_assertion_rewrite_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\assertion\rewrite.py</a></td>
+                <td>607</td>
+                <td>389</td>
+                <td>0</td>
+                <td>200</td>
+                <td>27</td>
+                <td class="right" data-ratio="269 807">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_assertion_truncate_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\assertion\truncate.py</a></td>
+                <td>52</td>
+                <td>40</td>
+                <td>0</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 72">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_assertion_util_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\assertion\util.py</a></td>
+                <td>293</td>
+                <td>253</td>
+                <td>0</td>
+                <td>148</td>
+                <td>0</td>
+                <td class="right" data-ratio="40 441">9%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_cacheprovider_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\cacheprovider.py</a></td>
+                <td>304</td>
+                <td>152</td>
+                <td>0</td>
+                <td>110</td>
+                <td>17</td>
+                <td class="right" data-ratio="177 414">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_capture_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\capture.py</a></td>
+                <td>556</td>
+                <td>203</td>
+                <td>0</td>
+                <td>138</td>
+                <td>43</td>
+                <td class="right" data-ratio="404 694">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_compat_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\compat.py</a></td>
+                <td>178</td>
+                <td>59</td>
+                <td>2</td>
+                <td>58</td>
+                <td>18</td>
+                <td class="right" data-ratio="147 236">62%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_config___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\config\__init__.py</a></td>
+                <td>801</td>
+                <td>337</td>
+                <td>0</td>
+                <td>308</td>
+                <td>56</td>
+                <td class="right" data-ratio="570 1109">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_config_argparsing_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\config\argparsing.py</a></td>
+                <td>252</td>
+                <td>81</td>
+                <td>31</td>
+                <td>108</td>
+                <td>15</td>
+                <td class="right" data-ratio="222 360">62%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_config_exceptions_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\config\exceptions.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_config_findpaths_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\config\findpaths.py</a></td>
+                <td>127</td>
+                <td>57</td>
+                <td>0</td>
+                <td>78</td>
+                <td>13</td>
+                <td class="right" data-ratio="105 205">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_debugging_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\debugging.py</a></td>
+                <td>225</td>
+                <td>158</td>
+                <td>0</td>
+                <td>64</td>
+                <td>4</td>
+                <td class="right" data-ratio="71 289">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_deprecated_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\deprecated.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_doctest_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\doctest.py</a></td>
+                <td>351</td>
+                <td>245</td>
+                <td>0</td>
+                <td>112</td>
+                <td>5</td>
+                <td class="right" data-ratio="115 463">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_faulthandler_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\faulthandler.py</a></td>
+                <td>59</td>
+                <td>12</td>
+                <td>0</td>
+                <td>6</td>
+                <td>2</td>
+                <td class="right" data-ratio="49 65">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_fixtures_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\fixtures.py</a></td>
+                <td>815</td>
+                <td>323</td>
+                <td>0</td>
+                <td>277</td>
+                <td>34</td>
+                <td class="right" data-ratio="592 1092">54%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_freeze_support_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\freeze_support.py</a></td>
+                <td>22</td>
+                <td>16</td>
+                <td>0</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 30">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_helpconfig_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\helpconfig.py</a></td>
+                <td>132</td>
+                <td>91</td>
+                <td>0</td>
+                <td>46</td>
+                <td>5</td>
+                <td class="right" data-ratio="46 178">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_hookspec_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\hookspec.py</a></td>
+                <td>112</td>
+                <td>24</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="89 114">78%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_junitxml_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\junitxml.py</a></td>
+                <td>373</td>
+                <td>275</td>
+                <td>0</td>
+                <td>116</td>
+                <td>3</td>
+                <td class="right" data-ratio="105 489">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_logging_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\logging.py</a></td>
+                <td>397</td>
+                <td>142</td>
+                <td>0</td>
+                <td>94</td>
+                <td>14</td>
+                <td class="right" data-ratio="281 491">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_main_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\main.py</a></td>
+                <td>461</td>
+                <td>164</td>
+                <td>0</td>
+                <td>204</td>
+                <td>41</td>
+                <td class="right" data-ratio="376 665">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_mark___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\mark\__init__.py</a></td>
+                <td>139</td>
+                <td>70</td>
+                <td>0</td>
+                <td>50</td>
+                <td>5</td>
+                <td class="right" data-ratio="78 189">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_mark_expression_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\mark\expression.py</a></td>
+                <td>123</td>
+                <td>73</td>
+                <td>0</td>
+                <td>40</td>
+                <td>1</td>
+                <td class="right" data-ratio="53 163">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_mark_structures_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\mark\structures.py</a></td>
+                <td>240</td>
+                <td>133</td>
+                <td>0</td>
+                <td>80</td>
+                <td>6</td>
+                <td class="right" data-ratio="127 320">40%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_monkeypatch_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\monkeypatch.py</a></td>
+                <td>169</td>
+                <td>102</td>
+                <td>0</td>
+                <td>58</td>
+                <td>8</td>
+                <td class="right" data-ratio="79 227">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_nodes_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\nodes.py</a></td>
+                <td>275</td>
+                <td>88</td>
+                <td>0</td>
+                <td>96</td>
+                <td>21</td>
+                <td class="right" data-ratio="228 371">61%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_nose_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\nose.py</a></td>
+                <td>21</td>
+                <td>11</td>
+                <td>0</td>
+                <td>12</td>
+                <td>1</td>
+                <td class="right" data-ratio="11 33">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_outcomes_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\outcomes.py</a></td>
+                <td>88</td>
+                <td>45</td>
+                <td>0</td>
+                <td>14</td>
+                <td>1</td>
+                <td class="right" data-ratio="44 102">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_pastebin_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\pastebin.py</a></td>
+                <td>70</td>
+                <td>47</td>
+                <td>0</td>
+                <td>16</td>
+                <td>3</td>
+                <td class="right" data-ratio="26 86">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_pathlib_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\pathlib.py</a></td>
+                <td>322</td>
+                <td>191</td>
+                <td>0</td>
+                <td>116</td>
+                <td>17</td>
+                <td class="right" data-ratio="166 438">38%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_python_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\python.py</a></td>
+                <td>842</td>
+                <td>482</td>
+                <td>2</td>
+                <td>350</td>
+                <td>43</td>
+                <td class="right" data-ratio="444 1192">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_python_api_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\python_api.py</a></td>
+                <td>237</td>
+                <td>162</td>
+                <td>0</td>
+                <td>100</td>
+                <td>1</td>
+                <td class="right" data-ratio="78 337">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_recwarn_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\recwarn.py</a></td>
+                <td>126</td>
+                <td>79</td>
+                <td>0</td>
+                <td>49</td>
+                <td>1</td>
+                <td class="right" data-ratio="50 175">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_reports_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\reports.py</a></td>
+                <td>278</td>
+                <td>146</td>
+                <td>0</td>
+                <td>96</td>
+                <td>10</td>
+                <td class="right" data-ratio="156 374">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_runner_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\runner.py</a></td>
+                <td>300</td>
+                <td>91</td>
+                <td>0</td>
+                <td>106</td>
+                <td>23</td>
+                <td class="right" data-ratio="258 406">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_setuponly_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\setuponly.py</a></td>
+                <td>56</td>
+                <td>29</td>
+                <td>0</td>
+                <td>28</td>
+                <td>4</td>
+                <td class="right" data-ratio="31 84">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_setupplan_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\setupplan.py</a></td>
+                <td>24</td>
+                <td>5</td>
+                <td>0</td>
+                <td>4</td>
+                <td>2</td>
+                <td class="right" data-ratio="21 28">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_skipping_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\skipping.py</a></td>
+                <td>173</td>
+                <td>95</td>
+                <td>0</td>
+                <td>82</td>
+                <td>16</td>
+                <td class="right" data-ratio="98 255">38%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_stepwise_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\stepwise.py</a></td>
+                <td>70</td>
+                <td>33</td>
+                <td>0</td>
+                <td>30</td>
+                <td>5</td>
+                <td class="right" data-ratio="42 100">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_store_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\store.py</a></td>
+                <td>34</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 34">85%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_terminal_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\terminal.py</a></td>
+                <td>848</td>
+                <td>362</td>
+                <td>0</td>
+                <td>392</td>
+                <td>92</td>
+                <td class="right" data-ratio="628 1240">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_timing_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\timing.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_tmpdir_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\tmpdir.py</a></td>
+                <td>92</td>
+                <td>43</td>
+                <td>0</td>
+                <td>14</td>
+                <td>1</td>
+                <td class="right" data-ratio="54 106">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_unittest_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\unittest.py</a></td>
+                <td>229</td>
+                <td>80</td>
+                <td>0</td>
+                <td>70</td>
+                <td>20</td>
+                <td class="right" data-ratio="179 299">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_warning_types_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\warning_types.py</a></td>
+                <td>46</td>
+                <td>2</td>
+                <td>0</td>
+                <td>20</td>
+                <td>1</td>
+                <td class="right" data-ratio="63 66">95%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__pytest_warnings_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_pytest\warnings.py</a></td>
+                <td>63</td>
+                <td>8</td>
+                <td>0</td>
+                <td>12</td>
+                <td>4</td>
+                <td class="right" data-ratio="61 75">81%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages__virtualenv_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\_virtualenv.py</a></td>
+                <td>79</td>
+                <td>78</td>
+                <td>0</td>
+                <td>22</td>
+                <td>1</td>
+                <td class="right" data-ratio="2 101">2%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_atomicwrites___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\atomicwrites\__init__.py</a></td>
+                <td>106</td>
+                <td>70</td>
+                <td>0</td>
+                <td>24</td>
+                <td>1</td>
+                <td class="right" data-ratio="37 130">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\__init__.py</a></td>
+                <td>26</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="27 28">96%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__compat_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_compat.py</a></td>
+                <td>86</td>
+                <td>39</td>
+                <td>7</td>
+                <td>14</td>
+                <td>7</td>
+                <td class="right" data-ratio="54 100">54%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__config_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_config.py</a></td>
+                <td>9</td>
+                <td>4</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 11">45%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__funcs_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_funcs.py</a></td>
+                <td>94</td>
+                <td>69</td>
+                <td>0</td>
+                <td>60</td>
+                <td>5</td>
+                <td class="right" data-ratio="32 154">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__make_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_make.py</a></td>
+                <td>853</td>
+                <td>321</td>
+                <td>0</td>
+                <td>421</td>
+                <td>69</td>
+                <td class="right" data-ratio="738 1274">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__next_gen_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_next_gen.py</a></td>
+                <td>30</td>
+                <td>22</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 42">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr__version_info_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\_version_info.py</a></td>
+                <td>36</td>
+                <td>10</td>
+                <td>0</td>
+                <td>10</td>
+                <td>4</td>
+                <td class="right" data-ratio="32 46">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr_converters_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\converters.py</a></td>
+                <td>28</td>
+                <td>19</td>
+                <td>0</td>
+                <td>16</td>
+                <td>1</td>
+                <td class="right" data-ratio="10 44">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr_exceptions_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\exceptions.py</a></td>
+                <td>18</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 18">78%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr_filters_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\filters.py</a></td>
+                <td>15</td>
+                <td>9</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 17">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr_setters_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\setters.py</a></td>
+                <td>27</td>
+                <td>18</td>
+                <td>0</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 35">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_attr_validators_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\attr\validators.py</a></td>
+                <td>116</td>
+                <td>55</td>
+                <td>0</td>
+                <td>48</td>
+                <td>1</td>
+                <td class="right" data-ratio="78 164">48%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\__init__.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama_ansi_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\ansi.py</a></td>
+                <td>74</td>
+                <td>8</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="70 78">90%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama_ansitowin32_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\ansitowin32.py</a></td>
+                <td>131</td>
+                <td>100</td>
+                <td>0</td>
+                <td>62</td>
+                <td>1</td>
+                <td class="right" data-ratio="32 193">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama_initialise_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\initialise.py</a></td>
+                <td>47</td>
+                <td>32</td>
+                <td>0</td>
+                <td>22</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 69">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama_win32_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\win32.py</a></td>
+                <td>78</td>
+                <td>33</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="45 88">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_colorama_winterm_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\colorama\winterm.py</a></td>
+                <td>119</td>
+                <td>81</td>
+                <td>0</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 157">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_importlib_metadata___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\importlib_metadata\__init__.py</a></td>
+                <td>231</td>
+                <td>95</td>
+                <td>2</td>
+                <td>42</td>
+                <td>2</td>
+                <td class="right" data-ratio="152 273">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_importlib_metadata__compat_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\importlib_metadata\_compat.py</a></td>
+                <td>30</td>
+                <td>2</td>
+                <td>47</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="28 30">93%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_iniconfig___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\iniconfig\__init__.py</a></td>
+                <td>122</td>
+                <td>99</td>
+                <td>0</td>
+                <td>52</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 174">13%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\__init__.py</a></td>
+                <td>8</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 8">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy__tracing_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\_tracing.py</a></td>
+                <td>41</td>
+                <td>17</td>
+                <td>0</td>
+                <td>8</td>
+                <td>1</td>
+                <td class="right" data-ratio="25 49">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy__version_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\_version.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy_callers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\callers.py</a></td>
+                <td>122</td>
+                <td>68</td>
+                <td>0</td>
+                <td>42</td>
+                <td>2</td>
+                <td class="right" data-ratio="70 164">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy_hooks_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\hooks.py</a></td>
+                <td>175</td>
+                <td>45</td>
+                <td>0</td>
+                <td>60</td>
+                <td>14</td>
+                <td class="right" data-ratio="164 235">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pluggy_manager_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pluggy\manager.py</a></td>
+                <td>195</td>
+                <td>88</td>
+                <td>0</td>
+                <td>82</td>
+                <td>18</td>
+                <td class="right" data-ratio="139 277">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\__init__.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__builtin_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_builtin.py</a></td>
+                <td>112</td>
+                <td>78</td>
+                <td>0</td>
+                <td>34</td>
+                <td>3</td>
+                <td class="right" data-ratio="37 146">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__code___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_code\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__code_code_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_code\code.py</a></td>
+                <td>524</td>
+                <td>408</td>
+                <td>0</td>
+                <td>182</td>
+                <td>2</td>
+                <td class="right" data-ratio="118 706">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__error_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_error.py</a></td>
+                <td>52</td>
+                <td>33</td>
+                <td>0</td>
+                <td>8</td>
+                <td>1</td>
+                <td class="right" data-ratio="20 60">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__path___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_path\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__path_common_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_path\common.py</a></td>
+                <td>278</td>
+                <td>140</td>
+                <td>0</td>
+                <td>104</td>
+                <td>15</td>
+                <td class="right" data-ratio="163 382">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__path_local_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_path\local.py</a></td>
+                <td>693</td>
+                <td>513</td>
+                <td>0</td>
+                <td>287</td>
+                <td>17</td>
+                <td class="right" data-ratio="219 980">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__vendored_packages___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_vendored_packages\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__vendored_packages_apipkg_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_vendored_packages\apipkg.py</a></td>
+                <td>148</td>
+                <td>47</td>
+                <td>0</td>
+                <td>64</td>
+                <td>12</td>
+                <td class="right" data-ratio="135 212">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_py__version_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\py\_version.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pytest___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pytest\__init__.py</a></td>
+                <td>48</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="48 48">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pytest___main___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pytest\__main__.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="4 5">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_pytest_collect_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\pytest\collect.py</a></td>
+                <td>21</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="19 23">83%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\__init__.py</a></td>
+                <td>9</td>
+                <td>7</td>
+                <td>0</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 17">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\__init__.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_acore_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\acore.py</a></td>
+                <td>47</td>
+                <td>30</td>
+                <td>0</td>
+                <td>16</td>
+                <td>1</td>
+                <td class="right" data-ratio="18 63">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_analyzers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\analyzers.py</a></td>
+                <td>94</td>
+                <td>41</td>
+                <td>0</td>
+                <td>30</td>
+                <td>5</td>
+                <td class="right" data-ratio="64 124">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_filters_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\filters.py</a></td>
+                <td>152</td>
+                <td>97</td>
+                <td>0</td>
+                <td>44</td>
+                <td>2</td>
+                <td class="right" data-ratio="57 196">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_intraword_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\intraword.py</a></td>
+                <td>203</td>
+                <td>180</td>
+                <td>0</td>
+                <td>106</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 309">7%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_morph_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\morph.py</a></td>
+                <td>109</td>
+                <td>82</td>
+                <td>0</td>
+                <td>46</td>
+                <td>0</td>
+                <td class="right" data-ratio="27 155">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_ngrams_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\ngrams.py</a></td>
+                <td>125</td>
+                <td>108</td>
+                <td>0</td>
+                <td>76</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 201">8%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_analysis_tokenizers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\analysis\tokenizers.py</a></td>
+                <td>157</td>
+                <td>132</td>
+                <td>0</td>
+                <td>74</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 231">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_automata___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\automata\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_automata_fsa_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\automata\fsa.py</a></td>
+                <td>517</td>
+                <td>435</td>
+                <td>0</td>
+                <td>222</td>
+                <td>0</td>
+                <td class="right" data-ratio="82 739">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_automata_lev_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\automata\lev.py</a></td>
+                <td>22</td>
+                <td>18</td>
+                <td>0</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 36">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_codec___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\codec\__init__.py</a></td>
+                <td>3</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 3">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_codec_base_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\codec\base.py</a></td>
+                <td>443</td>
+                <td>264</td>
+                <td>0</td>
+                <td>88</td>
+                <td>0</td>
+                <td class="right" data-ratio="179 531">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_codec_whoosh3_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\codec\whoosh3.py</a></td>
+                <td>772</td>
+                <td>598</td>
+                <td>0</td>
+                <td>200</td>
+                <td>0</td>
+                <td class="right" data-ratio="174 972">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_columns_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\columns.py</a></td>
+                <td>824</td>
+                <td>580</td>
+                <td>0</td>
+                <td>202</td>
+                <td>0</td>
+                <td class="right" data-ratio="244 1026">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_compat_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\compat.py</a></td>
+                <td>151</td>
+                <td>96</td>
+                <td>0</td>
+                <td>46</td>
+                <td>8</td>
+                <td class="right" data-ratio="63 197">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_fields_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\fields.py</a></td>
+                <td>713</td>
+                <td>459</td>
+                <td>0</td>
+                <td>259</td>
+                <td>23</td>
+                <td class="right" data-ratio="290 972">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_filedb___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\filedb\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_filedb_compound_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\filedb\compound.py</a></td>
+                <td>229</td>
+                <td>183</td>
+                <td>0</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 287">16%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_filedb_filestore_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\filedb\filestore.py</a></td>
+                <td>270</td>
+                <td>171</td>
+                <td>0</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="right" data-ratio="99 326">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_filedb_filetables_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\filedb\filetables.py</a></td>
+                <td>412</td>
+                <td>334</td>
+                <td>0</td>
+                <td>136</td>
+                <td>0</td>
+                <td class="right" data-ratio="78 548">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_filedb_structfile_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\filedb\structfile.py</a></td>
+                <td>236</td>
+                <td>120</td>
+                <td>0</td>
+                <td>32</td>
+                <td>4</td>
+                <td class="right" data-ratio="122 268">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_formats_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\formats.py</a></td>
+                <td>279</td>
+                <td>206</td>
+                <td>0</td>
+                <td>94</td>
+                <td>0</td>
+                <td class="right" data-ratio="73 373">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_idsets_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\idsets.py</a></td>
+                <td>451</td>
+                <td>329</td>
+                <td>0</td>
+                <td>184</td>
+                <td>0</td>
+                <td class="right" data-ratio="122 635">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_index_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\index.py</a></td>
+                <td>318</td>
+                <td>191</td>
+                <td>0</td>
+                <td>80</td>
+                <td>10</td>
+                <td class="right" data-ratio="141 398">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_lang___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\lang\__init__.py</a></td>
+                <td>40</td>
+                <td>29</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 52">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_lang_dmetaphone_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\lang\dmetaphone.py</a></td>
+                <td>268</td>
+                <td>262</td>
+                <td>0</td>
+                <td>248</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 516">1%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_lang_morph_en_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\lang\morph_en.py</a></td>
+                <td>37</td>
+                <td>19</td>
+                <td>0</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 61">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_lang_porter_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\lang\porter.py</a></td>
+                <td>84</td>
+                <td>63</td>
+                <td>0</td>
+                <td>54</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 138">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_legacy_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\legacy.py</a></td>
+                <td>17</td>
+                <td>12</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 19">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_matching___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\matching\__init__.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_matching_binary_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\matching\binary.py</a></td>
+                <td>530</td>
+                <td>442</td>
+                <td>0</td>
+                <td>224</td>
+                <td>0</td>
+                <td class="right" data-ratio="88 754">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_matching_combo_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\matching\combo.py</a></td>
+                <td>190</td>
+                <td>151</td>
+                <td>0</td>
+                <td>83</td>
+                <td>0</td>
+                <td class="right" data-ratio="39 273">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_matching_mcore_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\matching\mcore.py</a></td>
+                <td>271</td>
+                <td>176</td>
+                <td>0</td>
+                <td>84</td>
+                <td>0</td>
+                <td class="right" data-ratio="95 355">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_matching_wrappers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\matching\wrappers.py</a></td>
+                <td>329</td>
+                <td>222</td>
+                <td>0</td>
+                <td>88</td>
+                <td>0</td>
+                <td class="right" data-ratio="107 417">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\__init__.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser_common_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\common.py</a></td>
+                <td>21</td>
+                <td>13</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 27">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser_default_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\default.py</a></td>
+                <td>167</td>
+                <td>140</td>
+                <td>0</td>
+                <td>80</td>
+                <td>0</td>
+                <td class="right" data-ratio="27 247">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser_plugins_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\plugins.py</a></td>
+                <td>655</td>
+                <td>479</td>
+                <td>0</td>
+                <td>243</td>
+                <td>0</td>
+                <td class="right" data-ratio="176 898">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser_syntax_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\syntax.py</a></td>
+                <td>326</td>
+                <td>204</td>
+                <td>0</td>
+                <td>76</td>
+                <td>0</td>
+                <td class="right" data-ratio="122 402">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_qparser_taggers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\qparser\taggers.py</a></td>
+                <td>25</td>
+                <td>14</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 29">38%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\__init__.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_compound_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\compound.py</a></td>
+                <td>378</td>
+                <td>275</td>
+                <td>0</td>
+                <td>163</td>
+                <td>0</td>
+                <td class="right" data-ratio="103 541">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_nested_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\nested.py</a></td>
+                <td>187</td>
+                <td>147</td>
+                <td>0</td>
+                <td>54</td>
+                <td>0</td>
+                <td class="right" data-ratio="40 241">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_positional_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\positional.py</a></td>
+                <td>118</td>
+                <td>81</td>
+                <td>0</td>
+                <td>40</td>
+                <td>0</td>
+                <td class="right" data-ratio="37 158">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_qcolumns_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\qcolumns.py</a></td>
+                <td>54</td>
+                <td>38</td>
+                <td>0</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 68">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_qcore_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\qcore.py</a></td>
+                <td>244</td>
+                <td>150</td>
+                <td>0</td>
+                <td>62</td>
+                <td>0</td>
+                <td class="right" data-ratio="94 306">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_ranges_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\ranges.py</a></td>
+                <td>171</td>
+                <td>141</td>
+                <td>0</td>
+                <td>54</td>
+                <td>0</td>
+                <td class="right" data-ratio="30 225">13%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_spans_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\spans.py</a></td>
+                <td>422</td>
+                <td>301</td>
+                <td>0</td>
+                <td>120</td>
+                <td>0</td>
+                <td class="right" data-ratio="121 542">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_terms_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\terms.py</a></td>
+                <td>304</td>
+                <td>221</td>
+                <td>0</td>
+                <td>100</td>
+                <td>0</td>
+                <td class="right" data-ratio="83 404">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_query_wrappers_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\query\wrappers.py</a></td>
+                <td>92</td>
+                <td>48</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="44 96">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_reading_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\reading.py</a></td>
+                <td>695</td>
+                <td>504</td>
+                <td>0</td>
+                <td>258</td>
+                <td>0</td>
+                <td class="right" data-ratio="191 953">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_support___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\support\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_support_levenshtein_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\support\levenshtein.py</a></td>
+                <td>36</td>
+                <td>31</td>
+                <td>0</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 50">10%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_system_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\system.py</a></td>
+                <td>44</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="44 46">96%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util___init___py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\__init__.py</a></td>
+                <td>55</td>
+                <td>39</td>
+                <td>0</td>
+                <td>24</td>
+                <td>1</td>
+                <td class="right" data-ratio="17 79">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_cache_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\cache.py</a></td>
+                <td>197</td>
+                <td>181</td>
+                <td>0</td>
+                <td>30</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 227">7%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_filelock_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\filelock.py</a></td>
+                <td>81</td>
+                <td>62</td>
+                <td>0</td>
+                <td>18</td>
+                <td>1</td>
+                <td class="right" data-ratio="20 99">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_loading_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\loading.py</a></td>
+                <td>36</td>
+                <td>31</td>
+                <td>0</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 56">9%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_numeric_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\numeric.py</a></td>
+                <td>131</td>
+                <td>96</td>
+                <td>0</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="right" data-ratio="35 189">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_numlists_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\numlists.py</a></td>
+                <td>226</td>
+                <td>158</td>
+                <td>0</td>
+                <td>72</td>
+                <td>0</td>
+                <td class="right" data-ratio="68 298">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_text_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\text.py</a></td>
+                <td>39</td>
+                <td>22</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 51">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_times_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\times.py</a></td>
+                <td>199</td>
+                <td>164</td>
+                <td>0</td>
+                <td>114</td>
+                <td>0</td>
+                <td class="right" data-ratio="35 313">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_whoosh_util_varints_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\whoosh\util\varints.py</a></td>
+                <td>46</td>
+                <td>19</td>
+                <td>0</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 60">55%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_Users_rkolehmainen__virtualenvs_app-TmTilaaG_Lib_site-packages_zipp_py.html">C:\Users\rkolehmainen\.virtualenvs\app-TmTilaaG\Lib\site-packages\zipp.py</a></td>
+                <td>117</td>
+                <td>67</td>
+                <td>0</td>
+                <td>26</td>
+                <td>3</td>
+                <td class="right" data-ratio="53 143">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="src_document_document_functions_py.html">src\document\document_functions.py</a></td>
+                <td>18</td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 18">61%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="src_tests___init___py.html">src\tests\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="src_tests_document_functions_test_py.html">src\tests\document_functions_test.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="src_whoosh_config_index_py.html">src\whoosh_config\index.py</a></td>
+                <td>9</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td class="right" data-ratio="8 11">73%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.3</a>,
+            created at 2020-11-16 09:56 +0200
+        </p>
+    </div>
+</div>
+</body>
+</html>
