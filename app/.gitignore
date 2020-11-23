@@ -3,3 +3,5 @@
 .coverage
 .pytest_cache
 src/.idea
+src/whoosh_config/__pycache__
+htmlcov
