@@ -26,10 +26,6 @@ Application has been developed and tested with Python version
 python3 -m pipenv install
 ```
 
-```bash
-python3 -m pipenv run build
-```
-
 2. Run the app:
 
 ```bash
