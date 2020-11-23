@@ -1,6 +1,6 @@
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
-from document.document_functions import DocumentFunctions as doc_funcs
+import document.document_functions as doc_funcs
 
 class SearchView:
     def __init__(self, root, handle_upload, handle_start):
@@ -9,14 +9,28 @@ class SearchView:
         self.handle_start = handle_start
         self.frame = None
         self.entry = None
-        self.search_results = []
-        self.search_row = None
-
         self.initialize()
 
+    def handle_file_click(self):
+        print(self)
+        folder = tkinter.filedialog.askdirectory(mustexist=True)
+        doc_funcs.save_file(folder)
+
     def handle_search_button_click(self):
-        res = doc_funcs.search(self.entry.get())
-        print(res)
+        # Returns whoosh Query result object containing the specified number of hits
+        res = doc_funcs.search(self.entry.get(), 10)
+
+
+        heading_label = ttk.Label(master=self.frame, text="Results")
+        heading_label.pack(padx=5, pady=5)
+
+        # Unpack the object into result grid
+        for r in res:
+            username_label = ttk.Button(master=self.frame, text=r,
+                                        command=self.handle_file_click)
+            username_label.pack(padx=5, pady=5)
+
+        self.pack()
 
     def initialize(self):
         self.search_row = StringVar()

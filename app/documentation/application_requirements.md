@@ -15,15 +15,18 @@ There are two user groups:
 ### The base functionalities
 
 **Document upload**
-- User can select a document file from from harddrive and upload it to the database
+- User can select a document file from from hard drive and upload it to the database (done as of 22.11.2020)
 - User can give limited amount of classification details pertaining to the document
-- User may upload UNICODE text documents
+- User may upload UNICODE text documents (done as of 22.11.2020)
 
 **Document browsing, searching and download**
 - User may browse by classification details
 - User may search by classification or the document contents
+(Document content search done as of 22.11.2020)
 - Search results are rated by the best match
+(Done but the rating not displayed)
 - User may download the selected document
+(Almost done :D)
 
 ### The extensions
 
@@ -35,6 +38,7 @@ There are two user groups:
 
 **Document upload**
 - System performs a scan and warns if similar document has been already uploaded
+(A very, very naive if-else validation done today)
 - System allows user to add (only) .ppt(x) and .pdf documents
 	- System parses the text from the documents in to unicode in order to allow for Swoosh full-text search
 

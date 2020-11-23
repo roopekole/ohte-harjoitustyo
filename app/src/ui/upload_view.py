@@ -1,7 +1,8 @@
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
-from document.document_functions import DocumentFunctions as doc_funcs
+import document.document_functions as doc_funcs
 from os import path
+import time
 
 class UploadView:
     def __init__(self, root, handle_start, handle_search):
@@ -9,6 +10,7 @@ class UploadView:
         self.handle_start = handle_start
         self.handle_search = handle_search
         self.frame = None
+        self.frame_footer = None
         self.short_filename = None
         self.long_filename = None
 
@@ -19,20 +21,28 @@ class UploadView:
         #Upload the file to Whoosh index
         doc_funcs.get_file_contents(filename)
         self.short_filename.set(path.basename(filename))
-        self.long_filename.set(filename)
+        self.long_filename = filename
+
+        save_file_button = tkinter.Button(self.frame, text="SAVE", width=10, height=2, bg="#2B7a78",
+                                            command=self.handle_save_button_click)
+        save_file_button.pack()
+
+    def handle_save_button_click(self):
+        doc_funcs.save_file(self.long_filename)
+        self.destroy()
+        self.frame = ttk.Frame(master=self.root)
+        upload_label = tkinter.Label(self.frame, text="Upload successful", width=20, height=3, bg="#FEFFFF")
+        upload_label.pack(side=tkinter.LEFT, padx=10)
+        time.sleep(3)
+        self.handle_start()
 
     def initialize(self):
         self.short_filename = StringVar()
         self.short_filename.set("")
 
-        self.long_filename = StringVar()
-        self.long_filename.set("")
-
         self.frame = ttk.Frame(master=self.root)
         self.frame_footer = ttk.Frame(master=self.root)
 
-        bar = ttk.Separator()
-        bar.pack()
 
         upload_file_button = tkinter.Button(self.frame, text="Select a file", width=40, height=1, bg="#DEF2F1",
                                             command=self.handle_upload_button_click)

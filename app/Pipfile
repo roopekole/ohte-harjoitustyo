@@ -8,7 +8,7 @@ start = "python3 src/run.py"
 test = "pytest"
 coverage = "coverage run --branch -m pytest"
 coverage-report = "coverage html"
-
+lint = "pylint src"
 
 [dev-packages]
 
@@ -17,3 +17,4 @@ whoosh = "*"
 tkfilebrowser = "*"
 pytest = "*"
 coverage = "*"
+pylint = "*"

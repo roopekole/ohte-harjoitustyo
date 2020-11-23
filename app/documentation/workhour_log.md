@@ -6,11 +6,11 @@
 | 8.11   |  1   | Preliminary requirement specification |
 | 14.11  |  9   | "Mock-up" versions for the application and GUI logic |
 | 15.11  |  5   | Finalizing the week 3 readiness requirements |
+| 19.11  |  2   | Pylint activation and other small adjustments |
 |       |     |  |
 |       |     |  |
 |       |     |  |
 |       |     |  |
 |       |     |  |
 |       |     |  |
-|       |     |  |
-| tot   | 17   |  | 
+| tot   | 19   |  | 
