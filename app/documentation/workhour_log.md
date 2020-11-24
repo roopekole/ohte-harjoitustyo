@@ -9,8 +9,8 @@
 | 19.11  |  2   | Pylint activation and other small adjustments |
 | 22.11  | 4   | Files are uploaded to app directory, search outputs list of full test indices  |
 | 23.11 |  3   | Finalization of week 4 requirements and fixing week 3 missing things |
+| 24.11 |  1  | Refactoring and software architecture documentation |
 |       |     |  |
 |       |     |  |
 |       |     |  |
-|       |     |  |
-| tot   | 26   |  | 
+| tot   | 27  |  | 

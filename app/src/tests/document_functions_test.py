@@ -1,6 +1,6 @@
 import unittest
 import document.document_functions as docfuncs
-from whoosh_config.index import Config
+from config.whoosh_config import Config
 from whoosh.fields import Schema, STORED, ID, KEYWORD, TEXT
 import re
 
