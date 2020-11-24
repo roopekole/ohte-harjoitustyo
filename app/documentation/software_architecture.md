@@ -2,13 +2,14 @@
 
 ## Layer structure
 
-The application conforms to three layered architectural design:
+The application conforms to two-layered architectural design:
 
-*Image*
+![Package diagram](./package_diagram.jpg)
 
-Package _ui_ comprises of the graphical user interface logic, _services_ implement the application logic, and _functions_ contain the storage and upload functions. The package _entities_ contain the main application class objects.
+Package _ui_ comprises of the graphical user interface logic. Package _document_ contains the data access objects including storage and search functions for document class. If more class objects are added (such as _user_ class which is considered an extension in application requirements) those are added as separate packages. 
 
-(note: as of 23.11.2020 the application is converging towards the design but does not yet fully reflect it).
+Additionaly, package _config_ contains the application configuration files.
+
 
 ## Graphical user interface
 
@@ -21,6 +22,7 @@ Package _ui_ comprises of the graphical user interface logic, _services_ impleme
 
 
 ### Document and indexing files
+
 
 
 ## Major features
