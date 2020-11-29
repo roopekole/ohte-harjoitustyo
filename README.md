@@ -18,7 +18,7 @@ Application has been developed and tested with Python version
 - [Workhour log](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md)
 - [Software architecture](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/software_architecture.md)
 
-## Installation, running and testing the app
+## Get started
 
 1. Install dependencies:
 
@@ -26,25 +26,39 @@ Application has been developed and tested with Python version
 python3 -m pipenv install
 ```
 
-2. Run the app:
+2. Initialize the program
+
+```bash
+python3 -m pipenv run build
+```
+
+3. Run the app:
 
 ```bash
 python3 -m pipenv run start
 ```
 
-3. Perform unit testing:
+## Command prompt convenience commands:
+
+**Run the app**:
+
+```bash
+python3 -m pipenv run start
+```
+
+**Perform unit testing**:
 
 ```bash
 python3 -m pipenv run test
 ```
 
-Run the test coverage:
+**Run the test coverage**:
 
 ```bash
 python3 -m pipenv run coverage
 ```
 
-Generate test coverage report:
+**Generate test coverage report**:
 
 ```bash
 python3 -m pipenv run coverage-report
