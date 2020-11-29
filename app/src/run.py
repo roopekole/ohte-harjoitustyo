@@ -1,3 +1,12 @@
+from config.whoosh_config import Config as whoosh
+import os.path
+from whoosh import index
+
+if not os.path.exists("indexfiles"):
+    os.mkdir("indexfiles")
+    ix = index.create_in("indexfiles", whoosh.schema)
+
+
 from tkinter import Tk, ttk
 from ui.ui import UI
 

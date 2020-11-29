@@ -10,7 +10,7 @@
 | 22.11  | 4   | Files are uploaded to app directory, search outputs list of full test indices  |
 | 23.11 |  3   | Finalization of week 4 requirements and fixing week 3 missing things |
 | 24.11 |  1  | Refactoring and software architecture documentation |
+| 28.11 |  9  | Finalizing the basic features (upload, browse, search) |
 |       |     |  |
 |       |     |  |
-|       |     |  |
-| tot   | 27  |  | 
+| tot   | 36  |  | 

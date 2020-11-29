@@ -2,10 +2,11 @@ from tkinter import ttk
 import tkinter
 
 class StartView:
-    def __init__(self, root, handle_upload, handle_search):
+    def __init__(self, root, handle_upload, handle_search, handle_browse):
         self.root = root
         self.handle_upload = handle_upload
         self.handle_search = handle_search
+        self.handle_browse = handle_browse
         self.frame = None
 
         self.initialize()
@@ -16,7 +17,8 @@ class StartView:
                               command=self.handle_search)
         lbl1.pack(side=tkinter.LEFT, padx=10, pady=10)
 
-        lbl2 = tkinter.Button(self.frame, text="Browse", width=20, height=5, bg="#3AAFA9")
+        lbl2 = tkinter.Button(self.frame, text="Browse", width=20, height=5, bg="#3AAFA9",
+                              command=self.handle_browse)
         lbl2.pack(side=tkinter.LEFT)
 
         lbl3 = tkinter.Button(self.frame, text="Upload documents", width=20, height=5, bg="#DEF2F1",

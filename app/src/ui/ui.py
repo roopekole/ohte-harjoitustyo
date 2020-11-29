@@ -2,6 +2,7 @@ from tkinter import Tk, ttk
 from ui.start_view import StartView
 from ui.upload_view import UploadView
 from ui.search_view import SearchView
+from ui.browse_view import BrowseView
 
 class UI:
     def __init__(self, root):
@@ -20,6 +21,9 @@ class UI:
     def handle_search(self):
         self.show_search_view()
 
+    def handle_browse(self):
+        self.show_browse_view()
+
     def handle_start(self):
         self.show_start_view()
 
@@ -28,7 +32,8 @@ class UI:
         self.current_view = StartView(
             self.root,
             self.handle_upload,
-            self.handle_search
+            self.handle_search,
+            self.handle_browse
         )
         self.current_view.pack()
 
@@ -37,16 +42,29 @@ class UI:
         self.current_view = SearchView(
             self.root,
             self.handle_upload,
+            self.handle_browse,
             self.handle_start
         )
         self.current_view.pack()
+
+    def show_browse_view(self):
+        self.hide_current_view()
+        self.current_view = BrowseView(
+            self.root,
+            self.handle_upload,
+            self.handle_search,
+            self.handle_start
+        )
+        self.current_view.pack()
+
 
     def show_upload_view(self):
         self.hide_current_view()
         self.current_view = UploadView(
             self.root,
             self.handle_start,
-            self.handle_search
+            self.handle_search,
+            self.handle_browse
         )
         self.current_view.pack()
 

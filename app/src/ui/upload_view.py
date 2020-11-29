@@ -1,34 +1,41 @@
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
 import document.document_functions as doc_funcs
+from document.document import Document
 from os import path
 import time
 
 class UploadView:
-    def __init__(self, root, handle_start, handle_search):
+    def __init__(self, root, handle_start, handle_search, handle_browse):
         self.root = root
         self.handle_start = handle_start
         self.handle_search = handle_search
+        self.handle_browse = handle_browse
         self.frame = None
         self.frame_footer = None
         self.short_filename = None
         self.long_filename = None
+        self.project = None
 
         self.initialize()
 
     def handle_upload_button_click(self):
         filename = tkinter.filedialog.askopenfilename()
-        #Upload the file to Whoosh index
-        doc_funcs.get_file_contents(filename)
-        self.short_filename.set(path.basename(filename))
-        self.long_filename = filename
+        if filename:
+            doc_funcs.get_file_contents(filename)
 
-        save_file_button = tkinter.Button(self.frame, text="SAVE", width=10, height=2, bg="#2B7a78",
-                                            command=self.handle_save_button_click)
-        save_file_button.pack()
+            self.short_filename.set(path.basename(filename))
+            self.long_filename = filename
+
+            self.project = tkinter.Entry(master=self.frame)
+            self.project.pack()
+
+            save_file_button = tkinter.Button(self.frame, text="SAVE", width=10, height=2, bg="#2B7a78",
+                                                command=self.handle_save_button_click)
+            save_file_button.pack()
 
     def handle_save_button_click(self):
-        doc_funcs.save_file(self.long_filename)
+        doc_funcs.save_file(Document(self.project.get(), self.short_filename.get()), self.long_filename)
         self.destroy()
         self.frame = ttk.Frame(master=self.root)
         upload_label = tkinter.Label(self.frame, text="Upload successful", width=20, height=3, bg="#FEFFFF")
@@ -59,7 +66,8 @@ class UploadView:
                                        command=self.handle_search)
         search_button.pack(side=tkinter.LEFT, padx=10, pady=10)
 
-        browse_button = tkinter.Button(self.frame_footer, text="Browse", width=20, height=3, bg="#3AAFA9")
+        browse_button = tkinter.Button(self.frame_footer, text="Browse", width=20, height=3, bg="#3AAFA9",
+                                       command=self.handle_browse)
         browse_button.pack(side=tkinter.LEFT)
 
         upload_label = tkinter.Label(self.frame_footer, text="Upload documents", width=20, height=3, bg="#FEFFFF")
@@ -72,15 +80,3 @@ class UploadView:
     def destroy(self):
         self.frame.destroy()
         self.frame_footer.destroy()
-
-
-"""    def initialize(self):
-        lbl1 = tkinter.Button(self.root, text="Search", width=20, height=5, bg='SlateGray2')
-        lbl1.pack(side=tkinter.LEFT, padx=10, pady=10)
-
-        lbl2 = tkinter.Button(self.root, text="Browse", width=20, height=5, bg='SlateGray3')
-        lbl2.pack(side=tkinter.LEFT)
-
-        lbl3 = tkinter.Button(self.root, text="Upload documents", width=20, height=10, bg='SlateGray4')
-        lbl3.pack(side=tkinter.LEFT, padx=10)
-"""

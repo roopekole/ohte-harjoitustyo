@@ -9,6 +9,7 @@ test = "pytest"
 coverage = "coverage run --branch -m pytest"
 coverage-report = "coverage html"
 lint = "pylint src"
+build = "python3 src/build.py"
 
 [dev-packages]
 

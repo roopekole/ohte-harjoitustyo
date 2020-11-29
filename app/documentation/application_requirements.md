@@ -16,17 +16,16 @@ There are two user groups:
 
 **Document upload**
 - User can select a document file from from hard drive and upload it to the database (done as of 22.11.2020)
-- User can give limited amount of classification details pertaining to the document
-- User may upload UNICODE text documents (done as of 22.11.2020)
+- User can assing a project title to the document (done as of 28.11.2020)
+- User can add a customer title to the document
+- User may upload UNICODE text documents (done as of 22.11.2020, however not checked yet)
 
 **Document browsing, searching and download**
-- User may browse by classification details
-- User may search by classification or the document contents
-(Document content search done as of 22.11.2020)
-- Search results are rated by the best match
+- User can search the by the document content matches(Done as of 22.11.2020)
+	- Hit highlight(s) is shown to the user (done as of 28.11.2020)
+- Search results are rated by the best match (done as of 28.11.2020)
 (Done but the rating not displayed)
-- User may download the selected document
-(Almost done :D)
+- User may download the selected document (searched or browsed) to the selected directory (done as of 28.11.2020)
 
 ### The extensions
 
@@ -37,10 +36,13 @@ There are two user groups:
 	- Document removal removes the database record and full-text search index completely
 
 **Document upload**
+- User can give limited amount of classification details pertaining to the document
+	- User may browse by classification details
+	- User may search by classification or the document contents
 - System performs a scan and warns if similar document has been already uploaded
 (A very, very naive if-else validation done today)
 - System allows user to add (only) .ppt(x) and .pdf documents
-	- System parses the text from the documents in to unicode in order to allow for Swoosh full-text search
+	- System parses the text from the documents in to unicode in order to allow for Whoosh full-text search
 
 **Document browsing**
 - User can apply filters on browsing and searching
