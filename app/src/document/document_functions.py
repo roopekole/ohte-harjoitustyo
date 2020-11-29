@@ -13,24 +13,18 @@ def modify_highlight(string):
 
 def search(search_string, limit):
     # Note! Searcher is not closed explicitly, check if problematic
-    ix = index.open_dir("indexfiles")
-    searcher = ix.searcher()
-    query = QueryParser("content", ix.schema).parse(search_string)
+    indexer = index.open_dir("indexfiles")
+    searcher = indexer.searcher()
+    query = QueryParser("content", indexer.schema).parse(search_string)
     return searcher.search(query, limit=limit)
 
 def get_file_contents(file):
-    with codecs.open(file, "r", "ISO-8859-1") as f:
-        content = f.read()
+    with codecs.open(file, "r", "ISO-8859-1") as open_file:
+        content = open_file.read()
         return content
 
 def upload_document_to_db(document):
     conn = db_conn.get_database_connection()
-    """
-        Create new document into DOCUMENTS table
-        :param conn:
-        :param document:
-        :return: document id
-        """
     sql = ''' INSERT INTO documents(PROJECT,FILE)
                   VALUES(?,?) '''
     cur = conn.cursor()
@@ -65,9 +59,9 @@ def get_all_documents_from_db():
 
 def upload_to_index(document,long_file_name):
     # Add file to index-search
-    ix = index.open_dir("indexfiles")
-    writer = ix.writer()
-    writer.add_document(title=os.path.basename(str(document.id)), path=u"/a",
+    indexer = index.open_dir("indexfiles")
+    writer = indexer.writer()
+    writer.add_document(title=os.path.basename(str(document.document_id)), path=u"/a",
                         content=get_file_contents(long_file_name),
                         _stored_content=get_file_contents(long_file_name))
     writer.commit()
@@ -80,14 +74,14 @@ def save_file(document, long_file_name):
     file_exists = os.path.exists("file_storage/" + document.file)
     if file_exists:
         return
-    else:
-        document.id = upload_document_to_db(document)
-        save_path = "file_storage/"
-        filename = os.path.join(save_path, str(document.id))
-        newfile = open(filename, "w")
-        newfile.write(get_file_contents(long_file_name))
-        newfile.close()
-        upload_to_index(document, long_file_name)
+
+    document.document_id = upload_document_to_db(document)
+    save_path = "file_storage/"
+    filename = os.path.join(save_path, str(document.document_id))
+    newfile = open(filename, "w")
+    newfile.write(get_file_contents(long_file_name))
+    newfile.close()
+    upload_to_index(document, long_file_name)
 
 def download_file(doc_id, directory):
     doc = get_document_from_db(doc_id)

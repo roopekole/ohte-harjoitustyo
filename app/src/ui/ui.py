@@ -1,4 +1,3 @@
-from tkinter import Tk, ttk
 from ui.start_view import StartView
 from ui.upload_view import UploadView
 from ui.search_view import SearchView

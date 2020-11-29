@@ -1,14 +1,11 @@
-from tkinter import ttk, constants, filedialog, StringVar
+from tkinter import ttk, constants, filedialog
 import tkinter
 import document.document_functions as doc_funcs
-from document.document import Document
-
-
 
 class SearchResultList:
     def __init__(self, root, res):
         self.root = root
-        self.res = res
+        self.results = res
         self.frame = None
 
         self.initialize()
@@ -31,14 +28,15 @@ class SearchResultList:
         title_frame.grid_columnconfigure(2, weight=3)
         title_frame.grid_columnconfigure(3, weight=1)
         title_frame.pack(fill=constants.X)
-        for r in self.res:
-            self.initialize_result(r)
+        for result in self.results:
+            self.initialize_result(result)
 
-    def initialize_result(self, r):
-        document = doc_funcs.get_document_from_db(r['title'])
+    def initialize_result(self, result):
+        document = doc_funcs.get_document_from_db(result['title'])
 
         result_frame = ttk.Frame(master=self.frame)
-        content_highlight = ttk.Label(master=result_frame, text=doc_funcs.modify_highlight(r.highlights("content")))
+        content_highlight = ttk.Label(master=result_frame,
+                                      text=doc_funcs.modify_highlight(result.highlights("content")))
         project_name = ttk.Label(master=result_frame, text=document.project)
         customer_name = ttk.Label(master=result_frame, text="Customer")
         file_name = ttk.Label(master=result_frame, text=document.file)
@@ -46,7 +44,7 @@ class SearchResultList:
         download_button = ttk.Button(
             master=result_frame,
             text='Download',
-            command=lambda: self.handle_file_click(r)
+            command=lambda: self.handle_file_click(result)
         )
         ttk.Separator(result_frame).place(x=0, y=0, relwidth=1)
         project_name.grid(row=0, column=0, padx=5, pady=3, sticky=constants.W)
@@ -70,9 +68,9 @@ class SearchResultList:
         result_frame.pack(fill=constants.X)
 
 
-    def handle_file_click(self, r):
-        folder = tkinter.filedialog.askdirectory(mustexist=True)
-        doc_funcs.download_file(r['title'], folder)
+    def handle_file_click(self, result):
+        folder = filedialog.askdirectory(mustexist=True)
+        doc_funcs.download_file(result['title'], folder)
 
     def pack(self):
         self.frame.pack(fill=constants.X)
@@ -81,6 +79,8 @@ class SearchResultList:
         self.frame.destroy()
 
 class SearchView:
+    # pylint: disable=too-many-instance-attributes
+    # All instance attributes are needed
     def __init__(self, root, handle_upload, handle_browse, handle_start):
         self.root = root
         self.handle_upload = handle_upload
@@ -115,21 +115,29 @@ class SearchView:
         self.entry = tkinter.Entry(master=self.frame)
         self.entry.pack()
 
-        search_file_button = tkinter.Button(self.frame, text="Search for a file", width=40, height=1, bg="#DEF2F1", command=self.handle_search_button_click)
+        search_file_button = tkinter.Button(self.frame,
+                                            text="Search for a file",
+                                            width=40, height=1, bg="#DEF2F1",
+                                            command=self.handle_search_button_click)
         search_file_button.pack()
 
 
-        return_button = tkinter.Button(self.frame_footer, text="Back to start", width=65, height=1, bg="#DEF2F1", command=self.handle_start)
+        return_button = tkinter.Button(self.frame_footer,
+                                       text="Back to start", width=65, height=1, bg="#DEF2F1",
+                                       command=self.handle_start)
         return_button.pack(pady=10)
 
-        search_label = tkinter.Label(self.frame_footer, text="Search", width=20, height=3, bg="#FEFFFF")
+        search_label = tkinter.Label(self.frame_footer,
+                                     text="Search", width=20, height=3, bg="#FEFFFF")
         search_label.pack(side=tkinter.LEFT, padx=10, pady=10)
 
-        browse_button = tkinter.Button(self.frame_footer, text="Browse", width=20, height=3, bg="#3AAFA9",
+        browse_button = tkinter.Button(self.frame_footer,
+                                       text="Browse", width=20, height=3, bg="#3AAFA9",
                                        command=self.handle_browse)
         browse_button.pack(side=tkinter.LEFT)
 
-        upload_button = tkinter.Button(self.frame_footer, text="Upload documents", width=20, height=3, bg="#DEF2F1",
+        upload_button = tkinter.Button(self.frame_footer,
+                                       text="Upload documents", width=20, height=3, bg="#DEF2F1",
                                       command=self.handle_upload)
         upload_button.pack(side=tkinter.LEFT, padx=10)
 
