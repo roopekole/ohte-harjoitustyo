@@ -13,4 +13,4 @@
 | 28.11 |  9  | Finalizing the basic features (upload, browse, search) |
 | 29.11 | 3  | Refactoring and increasing test coverage |
 |       |     |  |
-| tot   | 36  |  | 
+| tot   | 39  |  | 
