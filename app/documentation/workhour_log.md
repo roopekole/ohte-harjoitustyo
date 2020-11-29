@@ -11,6 +11,6 @@
 | 23.11 |  3   | Finalization of week 4 requirements and fixing week 3 missing things |
 | 24.11 |  1  | Refactoring and software architecture documentation |
 | 28.11 |  9  | Finalizing the basic features (upload, browse, search) |
-|       |     |  |
+| 29.11 | 3  | Refactoring and increasing test coverage |
 |       |     |  |
 | tot   | 36  |  | 
