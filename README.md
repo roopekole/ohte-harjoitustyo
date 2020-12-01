@@ -19,7 +19,7 @@ Application has been developed and tested with Python version
 - [Software architecture](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/software_architecture.md)
 
 ## Release
-[First release:](https://github.com/roopekole/ohte-harjoitustyo/releases/tag/viikko5)
+[First release](https://github.com/roopekole/ohte-harjoitustyo/releases/tag/viikko5)
  
 
 ## Get started
