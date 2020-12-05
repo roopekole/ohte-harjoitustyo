@@ -18,6 +18,7 @@ def create_tables(connection):
         CREATE TABLE documents (
             id INTEGER PRIMARY KEY,
             PROJECT TEXT,
+            CUSTOMER TEXT,
             FILE TEXT
         );
     ''')

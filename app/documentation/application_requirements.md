@@ -17,14 +17,15 @@ There are two user groups:
 **Document upload**
 - User can select a document file from from hard drive and upload it to the database (done as of 22.11.2020)
 - User can assing a project title to the document (done as of 28.11.2020)
-- User can add a customer title to the document
-- User may upload UNICODE text documents (done as of 22.11.2020, however not checked yet)
+- User can add a customer title to the document (done as of 5.12.2020)
+- ~~User may upload UNICODE text documents (done as of 22.11.2020, however not checked yet)~~
+	- Above requirement has become redundant after adding the extension feature which parses the text content from PDF files
 
 **Document browsing, searching and download**
 - User can search the by the document content matches(Done as of 22.11.2020)
 	- Hit highlight(s) is shown to the user (done as of 28.11.2020)
 - Search results are rated by the best match (done as of 28.11.2020)
-(Done but the rating not displayed)
+	- Search score is displayed to the user, BM25F scoring algorithm used (done as of 5.12.2020)
 - User may download the selected document (searched or browsed) to the selected directory (done as of 28.11.2020)
 
 ### The extensions
@@ -42,8 +43,12 @@ There are two user groups:
 - System performs a scan and warns if similar document has been already uploaded
 (A very, very naive if-else validation done today)
 - System allows user to add (only) .ppt(x) and .pdf documents
-	- System parses the text from the documents in to unicode in order to allow for Whoosh full-text search
+	- System parses the text from the documents in to unicode in order to allow for Whoosh full-text search (PDF parse added as of 5.12.2020, note PDF parsing can only deal with UTF-8 encoding at the moment)
 
-**Document browsing**
+**Document browsing and searching**
 - User can apply filters on browsing and searching
-- User interface allows for a preview of the full-text search result
+- User interface allows for a preview of the full-text search result (naive preview with keyword hits added as of 28.11.2020)
+
+
+**Usability and GUI**
+- Progress animation is shown to user during uploads and downloads (done as of 5.12.2020)
