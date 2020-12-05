@@ -12,5 +12,9 @@
 | 24.11 |  1  | Refactoring and software architecture documentation |
 | 28.11 |  9  | Finalizing the basic features (upload, browse, search) |
 | 29.11 | 3  | Refactoring and increasing test coverage |
+| 5.12  | 9 | Finalizing all basic requirements, improving UI, adding extension features |
 |       |     |  |
-| tot   | 39  |  | 
+|       |     |  |
+|       |     |  |
+|       |     |  |
+| tot   | 48  |  | 
