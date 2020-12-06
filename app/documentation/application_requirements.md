@@ -48,7 +48,10 @@ There are two user groups:
 **Document browsing and searching**
 - User can apply filters on browsing and searching
 - User interface allows for a preview of the full-text search result (naive preview with keyword hits added as of 28.11.2020)
+- Allow user to define maximum hit number during the search
+- Allow user to select search scoring method (radio buttons to select the Whoosh algorithms)
 
 
 **Usability and GUI**
 - Progress animation is shown to user during uploads and downloads (done as of 5.12.2020)
+- Allow user to include keyword hit preview

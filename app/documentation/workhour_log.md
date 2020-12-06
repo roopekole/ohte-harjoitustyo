@@ -13,8 +13,8 @@
 | 28.11 |  9  | Finalizing the basic features (upload, browse, search) |
 | 29.11 | 3  | Refactoring and increasing test coverage |
 | 5.12  | 9 | Finalizing all basic requirements, improving UI, adding extension features |
+| 6.12  | 6  | Refactoring, documentation (manual), small UI improvements and other miscellaneous fixes |
 |       |     |  |
 |       |     |  |
 |       |     |  |
-|       |     |  |
-| tot   | 48  |  | 
+| tot   | 54  |  | 
