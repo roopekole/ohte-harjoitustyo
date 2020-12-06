@@ -1,10 +1,20 @@
 import time
 
-def show_progress(window, bar):
+def show_progress(window, progress_bar):
+    """
+
+    Args:
+        window: TKinter root frame
+        progress_bar: progressbar object
+
+    Returns: updates the progressbar value attribute
+    and updates the window (no return value)
+
+    """
     steps = 100
-    x = 0
-    while (x < steps):
+    counter = 0
+    while counter < steps:
         time.sleep(0.01)
-        bar["value"] += 1
-        x += 1
+        progress_bar["value"] += 1
+        counter += 1
         window.update_idletasks()

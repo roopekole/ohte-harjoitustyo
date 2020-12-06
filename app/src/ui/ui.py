@@ -4,7 +4,15 @@ from ui.search_view import SearchView
 from ui.browse_view import BrowseView
 
 class UI:
+    """UI class which processes the main logic for different UI views
+
+    """
     def __init__(self, root):
+        """
+
+        Args:
+            root: TKInter root frame
+        """
         self.root = root
         self.current_view = None
 

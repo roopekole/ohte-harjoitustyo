@@ -11,6 +11,14 @@ class UploadView:
     # All instance attributes are needed
 
     def __init__(self, root, handle_start, handle_search, handle_browse):
+        """
+
+        Args:
+            root: TKInter root frame
+            handle_start: function to process Return to start button click
+            handle_search: function to process Search button click
+            handle_browse: function to process browse button click
+        """
         self.root = root
         self.handle_start = handle_start
         self.handle_search = handle_search
@@ -22,20 +30,32 @@ class UploadView:
         self.project = None
         self.customer = None
         self.instruction_text = None
-        self.bar = None
+        self.progress_bar = None
         self.file_text = None
 
         self.initialize()
 
 
     def check_file_type(self, file):
+        """
+
+        Args:
+            file: File selected by the application user
+
+        Returns: True if file is PDF file, else False
+
+        """
         return str(file[-4:]).lower() == ".pdf"
 
     def handle_upload_button_click(self):
+        """ Processes the Select file button click.
+
+        """
         filename = filedialog.askopenfilename()
 
-        if not(self.check_file_type(filename)):
-            # Todo: one can work around the check,
+        if not self.check_file_type(filename):
+            # pylint: disable=fixme
+            # TODO: one can work around the check,
             #  by selecting PDF first and then other file type
             self.instruction_text.set("You must select a PDF file type!")
 
@@ -65,16 +85,24 @@ class UploadView:
             save_file_button.pack(pady=20)
 
     def handle_save_button_click(self):
+        """Processes the Save button click after file has been selected and
+        information has been entered.
+
+        """
         self.instruction_text.set("Uploading")
         doc_funcs.save_file(Document(self.project.get(), self.customer.get(),
                                      self.short_filename.get()), self.long_filename)
 
-        background_progress.show_progress(self.root, self.bar)
+        background_progress.show_progress(self.root, self.progress_bar)
 
         self.destroy()
         self.handle_start()
 
     def initialize(self):
+        """ Initializes the Upload view
+
+
+        """
         self.short_filename = StringVar()
         self.short_filename.set("")
 
@@ -89,15 +117,17 @@ class UploadView:
 
 
         upload_file_button = tkinter.Button(self.frame,
-                                            text="Select a file (.PDF allowed)", width=40, height=1, bg="#DEF2F1",
+                                            text="Select a file (.PDF allowed)",
+                                            width=40, height=1, bg="#DEF2F1",
                                             command=self.handle_upload_button_click)
         upload_file_button.pack()
 
         upload_file_label = ttk.Label(self.frame, textvariable=self.file_text)
         upload_file_label.pack(pady=(5,0))
 
-        self.bar = ttk.Progressbar(self.frame_footer, style="custom.Horizontal.TProgressbar")
-        self.bar.pack(fill="x")
+        self.progress_bar = ttk.Progressbar(self.frame_footer,
+                                            style="custom.Horizontal.TProgressbar")
+        self.progress_bar.pack(fill="x")
         instruction_label = tkinter.Label(self.frame_footer, textvariable=self.instruction_text,
                                           bg="#E2F0FA", height=2, width=65, justify="center")
         instruction_label.pack(fill="x")

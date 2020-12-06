@@ -4,6 +4,12 @@ import document.document_functions as doc_funcs
 from utilities import background_progress
 
 class BrowseView:
+    """Main browse frame generating class
+
+    """
+
+    # pylint: disable=too-many-instance-attributes
+    # All instance attributes are needed
     def __init__(self, root, handle_upload, handle_search, handle_start):
         self.root = root
         self.handle_upload = handle_upload
@@ -13,23 +19,31 @@ class BrowseView:
         self.frame_footer = None
         self.project = None
         self.instruction_text = None
-        self.bar = None
+        self.progress_bar = None
         self.document_amount = 0
 
         self.initialize()
 
     def handle_file_click(self, document_id, file):
+        """Processes the Download button click for a particular browse list item
+
+        """
         folder = filedialog.askdirectory(mustexist=True)
         if folder:
             self.instruction_text.set("Downloading " + file)
-            background_progress.show_progress(self.root, self.bar)
+            background_progress.show_progress(self.root, self.progress_bar)
             doc_funcs.download_file(document_id, folder)
-            self.bar["value"] = 0
-            self.instruction_text.set("There are " + self.document_amount.get() + " documents in the database. \n"
-                                                                           "Click Download to save the file")
+            self.progress_bar["value"] = 0
+            self.instruction_text.set("There are " + self.document_amount.get() +
+                                      " documents in the database. \n"
+                                      "Click Download to save the file")
 
 
     def initialize(self):
+        """Initializes the browse list view for all stored documents
+
+
+        """
         self.frame = ttk.Frame(master=self.root)
         self.frame_footer = ttk.Frame(master=self.root)
 
@@ -39,8 +53,9 @@ class BrowseView:
         self.document_amount.set(str(len(documents)))
 
         self.instruction_text = StringVar()
-        self.instruction_text.set("There are " + self.document_amount.get() + " documents in the database. \n"
-                                                                  "Click Download to save the file")
+        self.instruction_text.set("There are " + self.document_amount.get() +
+                                  " documents in the database. \n"
+                                "Click Download to save the file")
 
         title_frame = ttk.Frame(master=self.frame)
         project_name = ttk.Label(master=title_frame, text="Project")
@@ -90,8 +105,9 @@ class BrowseView:
 
 
 
-        self.bar = ttk.Progressbar(self.frame_footer, style="custom.Horizontal.TProgressbar")
-        self.bar.pack(fill="x")
+        self.progress_bar = ttk.Progressbar(self.frame_footer,
+                                            style="custom.Horizontal.TProgressbar")
+        self.progress_bar.pack(fill="x")
         instruction_label = tkinter.Label(self.frame_footer, textvariable=self.instruction_text,
                                           bg="#E2F0FA", width=65, justify="center")
         instruction_label.pack(fill="x")

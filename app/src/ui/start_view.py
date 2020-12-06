@@ -2,7 +2,16 @@ from tkinter import ttk
 import tkinter
 
 class StartView:
+
     def __init__(self, root, handle_upload, handle_search, handle_browse):
+        """
+
+        Args:
+            root: TKInter root frmae
+            handle_upload: function to process Upload button click
+            handle_search: function to process Search button click
+            handle_browse: function to process Browse button click
+        """
         self.root = root
         self.handle_upload = handle_upload
         self.handle_search = handle_search

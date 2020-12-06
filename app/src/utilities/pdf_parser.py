@@ -1,6 +1,14 @@
 import PyPDF2
 
-def parsePDF(pdf):
+def parse_pdf(pdf):
+    """
+
+    Args:
+        pdf: PDF document file from which text content is extracted
+
+    Returns: Extracted text content
+
+    """
     with open(pdf, 'rb') as pdf_file:
         read_pdf = PyPDF2.PdfFileReader(pdf_file)
         number_of_pages = read_pdf.getNumPages()
