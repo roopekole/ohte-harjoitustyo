@@ -24,21 +24,23 @@ class SearchResultList:
         project_name = ttk.Label(master=title_frame, text="Project")
         customer_name = ttk.Label(master=title_frame, text="Customer")
         file_name = ttk.Label(master=title_frame, text="File name")
-        score = ttk.Label(master=title_frame, text="Search score")
+        dummy_name = ttk.Label(master=title_frame, text="  ")
+        score = ttk.Label(master=title_frame, text="Search score (BMF25)")
 
-        project_name.grid(row=0, column=0, padx=5, pady=0, sticky=constants.W)
-        customer_name.grid(row=0, column=1, padx=5, pady=0, sticky=constants.W)
-        file_name.grid(row=0, column=2, padx=5, pady=0, sticky=constants.W)
-        score.grid(row=1, column=3, padx=5, pady=0, sticky=constants.EW)
+        project_name.grid(row=0, column=0, padx=(5,0), pady=0, sticky=constants.W)
+        customer_name.grid(row=0, column=1, padx=0, pady=0, sticky=constants.W)
+        file_name.grid(row=0, column=2, padx=0, pady=0, sticky=constants.W)
+        dummy_name.grid(row=0, column=3, padx=(0,5), pady=0, sticky=constants.EW)
+        score.grid(row=1, column=3, padx=(0,5), pady=(0,2), sticky=constants.E)
 
         file_highlight = ttk.Label(master=title_frame, text="Content highlight")
-        file_highlight.grid(row=1, column=0, columnspan=3, padx=5, pady=0, sticky=constants.W)
+        file_highlight.grid(row=1, column=0, columnspan=3, padx=(5,0), pady=(0,2), sticky=constants.W)
 
         title_frame.grid_columnconfigure(0, weight=3)
         title_frame.grid_columnconfigure(1, weight=3)
         title_frame.grid_columnconfigure(2, weight=3)
-        title_frame.grid_columnconfigure(3, weight=1)
-        title_frame.pack(fill=constants.X)
+        title_frame.grid_columnconfigure(3, weight=0)
+        title_frame.pack(fill="x")
 
         for result in self.results:
             self.initialize_result(result)
@@ -52,7 +54,7 @@ class SearchResultList:
         project_name = ttk.Label(master=result_frame, text=document.project)
         customer_name = ttk.Label(master=result_frame, text=document.customer)
         file_name = ttk.Label(master=result_frame, text=document.file)
-        score_name = ttk.Label(master=result_frame, text=result.score)
+        score_name = ttk.Label(master=result_frame, text=round(result.score, 4))
 
         download_button = ttk.Button(
             master=result_frame,
@@ -60,17 +62,17 @@ class SearchResultList:
             command=lambda: self.handle_file_click(result)
         )
         ttk.Separator(result_frame).place(x=0, y=0, relwidth=1)
-        project_name.grid(row=0, column=0, padx=5, pady=3, sticky=constants.W)
-        customer_name.grid(row=0, column=1, padx=5, pady=3, sticky=constants.W)
-        file_name.grid(row=0, column=2, padx=5, pady=3, sticky=constants.W)
-        content_highlight.grid(row=1, column=0, columnspan=3, padx=5, pady=3, sticky=constants.W)
-        score_name.grid(row=1, column=3, sticky=constants.W)
+        project_name.grid(row=0, column=0, padx=(5,0), pady=3, sticky=constants.W)
+        customer_name.grid(row=0, column=1, padx=0, pady=3, sticky=constants.W)
+        file_name.grid(row=0, column=2, padx=0, pady=3, sticky=constants.W)
+        content_highlight.grid(row=1, column=0, columnspan=3, padx=(5,0), pady=3, sticky=constants.W)
+        score_name.grid(row=1, column=3, padx=(0,5), pady=3, sticky=constants.E)
 
 
         download_button.grid(
             row=0,
             column=3,
-            padx=5,
+            padx=(0,5),
             pady=3,
             sticky=constants.EW
         )
@@ -78,8 +80,8 @@ class SearchResultList:
         result_frame.grid_columnconfigure(0, weight=3)
         result_frame.grid_columnconfigure(1, weight=3)
         result_frame.grid_columnconfigure(2, weight=3)
-        result_frame.grid_columnconfigure(3, weight=1)
-        result_frame.pack(fill=constants.X)
+        result_frame.grid_columnconfigure(3, weight=0)
+        result_frame.pack()
 
 
     def handle_file_click(self, result):
