@@ -10,20 +10,16 @@ import re
 
 class TestFunctions(unittest.TestCase):
 
-    def test_upload_can_access_file_contents(self):
-        self.assertEqual(docfuncs.get_file_contents("src/tests/upload_test_file.txt"), "This is the content of the file")
-
     def test_search_gets_schema_from_config(self):
         self.assertEqual(Config.schema, Schema(title=TEXT(stored=True),
                                                content=TEXT(stored=True),
                                                path=ID(stored=True),))
 
-    def test_search_yields_no_results_with_bogus_string(self):
-        # Test that the numerical value in the query result object is 0
-        res = re.findall(r'\d+',
-                         str(docfuncs.search(
-                            "bogus_content_qpwoeiurowieurpoqwieurpoqwieurpwqopoweiurpowqeiurowieru", 9999999))[0:15])  # Extract integer with regex
-        self.assertEqual(int(res[0]), 0)
+    @mock.patch("document.document_functions.search", return_value=0)
+    def test_search_yields_no_results_with_bogus_string(self, mock_search):
+        docfuncs.search("somebogusstring", 0)
+        self.assertTrue(mock_search.called)
+        self.assertEqual(docfuncs.search("somebogusstring", 0), 0)
 
     def test_string_highlight_removes_html_tags_and_creates_uppercase(self):
         self.assertEqual(docfuncs.modify_highlight("test string which is not highlighted"),
@@ -40,4 +36,11 @@ class TestFunctions(unittest.TestCase):
         n = cur.fetchone()[0]
         self.assertEqual(len(docfuncs.get_all_documents_from_db()), n)
         cur.close()
+
+    def test_get_doc_from_db(self):
+        if len(docfuncs.get_all_documents_from_db()) == 0:
+            self.assertIsNone(docfuncs.get_document_from_db(1))
+        else:
+            self.assertEqual(docfuncs.get_document_from_db(1).document_id, 1)
+
 
