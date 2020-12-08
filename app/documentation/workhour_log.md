@@ -14,7 +14,7 @@
 | 29.11 | 3  | Refactoring and increasing test coverage |
 | 5.12  | 9 | Finalizing all basic requirements, improving UI, adding extension features |
 | 6.12  | 6  | Refactoring, documentation (manual), small UI improvements and other miscellaneous fixes |
+| 7.12   | 3  | Designin mock-tests to unit test database and indexing functions |
 |       |     |  |
 |       |     |  |
-|       |     |  |
-| tot   | 54  |  | 
+| tot   | 57  |  | 

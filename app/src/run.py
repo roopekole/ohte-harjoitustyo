@@ -11,7 +11,7 @@ if not os.path.exists("indexfiles"):
 window = Tk()
 window.title('Reference data manager')
 window.configure(bg="#FFFFFF")
-window.geometry("500x500")
+window.geometry("600x500")
 
 # Initialize style
 s = ttk.Style()
