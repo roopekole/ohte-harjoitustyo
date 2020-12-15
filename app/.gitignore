@@ -3,6 +3,7 @@
 .coverage
 .pytest_cache
 src/.idea
+.idea
 src/whoosh_config/__pycache__
 htmlcov
 data/database.sqlite
