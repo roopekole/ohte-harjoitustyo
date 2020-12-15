@@ -15,6 +15,6 @@
 | 5.12  | 9 | Finalizing all basic requirements, improving UI, adding extension features |
 | 6.12  | 6  | Refactoring, documentation (manual), small UI improvements and other miscellaneous fixes |
 | 7.12   | 3  | Designin mock-tests to unit test database and indexing functions |
-|       |     |  |
-|       |     |  |
-| tot   | 57  |  | 
+| 14.12  | 2  | Application architecture documentation and refactoring |
+| 15.12  |  4 | Refactoring (getting rid of hardcodings), improving test coverage |
+| tot   | 63  |  | 
