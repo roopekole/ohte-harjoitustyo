@@ -1,25 +1,27 @@
+import os
 import unittest
-from unittest import mock
 import document.document_functions as docfuncs
 from document.document import Document
 from config.whoosh_config import Config
 from whoosh.fields import Schema, ID, TEXT
 from config import database_connect, database_config, database_initialize
-import re
-
+from utilities import pdf_parser
 
 class TestFunctions(unittest.TestCase):
+
 
     def test_search_gets_schema_from_config(self):
         self.assertEqual(Config.schema, Schema(title=TEXT(stored=True),
                                                content=TEXT(stored=True),
                                                path=ID(stored=True),))
 
-    @mock.patch("document.document_functions.search", return_value=0)
-    def test_search_yields_no_results_with_bogus_string(self, mock_search):
-        docfuncs.search("somebogusstring", 0)
-        self.assertTrue(mock_search.called)
-        self.assertEqual(docfuncs.search("somebogusstring", 0), 0)
+    def test_search_yields_no_results_with_bogus_string(self):
+        # In the test indices there are no hits with keywork "somebogusstring"
+        self.assertEqual(len(docfuncs.search("somebogusstring", 10)), 0)
+
+    def test_searching_yields_res_objects(self):
+        #There are two docs with hits "ipsum"
+        self.assertEqual(len(docfuncs.search("ipsum", 10)), 2)
 
     def test_string_highlight_removes_html_tags_and_creates_uppercase(self):
         self.assertEqual(docfuncs.modify_highlight("test string which is not highlighted"),
@@ -43,4 +45,30 @@ class TestFunctions(unittest.TestCase):
         else:
             self.assertEqual(docfuncs.get_document_from_db(1).document_id, 1)
 
+
+    def test_upload_metadata_to_db(self):
+        # Test should return id 3 when new document is inserted
+        # At last the inserted row is removed
+        doc = Document("Test project", "Test customer", "test_file.xyz")
+        self.assertEqual(docfuncs.upload_document_to_db(doc), 3)
+        conn = database_connect.get_database_connection()
+        cur = conn.cursor()
+        sql = '''DELETE FROM documents WHERE id = 3 '''
+        cur.execute(sql)
+        conn.commit()
+        cur.close()
+
+    def test_uploading_content_to_index(self):
+        # Search for term, add similar content and check that hits increase
+        doc = Document("Test project", "Test customer", "test_file")
+        hits = len(docfuncs.search("test", 999999999999999999))
+        docfuncs.upload_to_index(doc, "src/tests/test_upload_files/one_page_test_file.pdf")
+        self.assertEqual(len(docfuncs.search("test", 99999999999999999)), hits+1)
+
+    def test_downloading_file(self):
+        # "Download" file to test storage and assert the parsed content
+        docfuncs.download_file(2, "src/tests/test_upload_files/download/")
+        downloaded_content = pdf_parser.parse_pdf("src/tests/test_upload_files/download/sample2.pdf")
+        self.assertEqual(downloaded_content[:28], "Aeque enim contingit omnibus")
+        os.remove("src/tests/test_upload_files/download/sample2.pdf")
 

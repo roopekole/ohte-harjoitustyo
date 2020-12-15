@@ -5,6 +5,8 @@ from whoosh.qparser import QueryParser
 from config import database_connect as db_conn
 from document.document import Document
 from utilities import pdf_parser
+from config.whoosh_config import Config
+from config.file_storage_config import DOCUMENT_FILEPATH
 
 def modify_highlight(string):
     """
@@ -32,7 +34,8 @@ def search(search_string, limit):
 
     """
     # Note! Searcher is not closed explicitly, check if problematic
-    indexer = index.open_dir("indexfiles")
+
+    indexer = index.open_dir(Config.WHOOSH_FILEPATH)
     searcher = indexer.searcher()
     query = QueryParser("content", indexer.schema).parse(search_string)
     return searcher.search(query, limit=limit)
@@ -104,14 +107,14 @@ def upload_to_index(document,long_file_name):
 
     """
     # Add file to index-search
-    indexer = index.open_dir("indexfiles")
+    indexer = index.open_dir(Config.WHOOSH_FILEPATH)
     writer = indexer.writer()
     writer.add_document(title=os.path.basename(str(document.document_id)), path=document.file,
                         content=pdf_parser.parse_pdf(long_file_name),
                         _stored_content=pdf_parser.parse_pdf(long_file_name))
     writer.commit()
 
-def save_file(document, long_file_name):
+def save_file(project,customer,file, long_file_name):
     """ Processes the server functions of the file upload request.
 
     Args:
@@ -122,16 +125,10 @@ def save_file(document, long_file_name):
     Returns:
 
     """
-    if not os.path.exists("file_storage"):
-        os.mkdir("file_storage")
-
-    # Naive file identicality check
-    file_exists = os.path.exists("file_storage/" + document.file)
-    if file_exists:
-        return
+    document = Document(project, customer, file)
 
     document.document_id = upload_document_to_db(document)
-    save_path = "file_storage/"
+    save_path = DOCUMENT_FILEPATH
     filename = os.path.join(save_path, str(document.document_id))
 
     newfile = open(filename, "w+b")

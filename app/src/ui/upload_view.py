@@ -2,7 +2,6 @@ from os import path
 from tkinter import ttk, constants, filedialog, StringVar
 import tkinter
 import document.document_functions as doc_funcs
-from document.document import Document
 from utilities import background_progress
 
 class UploadView:
@@ -90,8 +89,8 @@ class UploadView:
 
         """
         self.instruction_text.set("Uploading")
-        doc_funcs.save_file(Document(self.project.get(), self.customer.get(),
-                                     self.short_filename.get()), self.long_filename)
+        doc_funcs.save_file(self.project.get(), self.customer.get(),
+                                     self.short_filename.get(), self.long_filename)
 
         background_progress.show_progress(self.root, self.progress_bar)
 
