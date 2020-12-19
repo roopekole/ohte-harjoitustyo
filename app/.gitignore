@@ -1,5 +1,4 @@
 .cache
-.coveragerc
 .coverage
 .pytest_cache
 src/.idea

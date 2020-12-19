@@ -1,0 +1,3 @@
+[run]
+source = src
+omit = src/tests/**,src/ui/**,src/config/whoosh_initialize.py,src/config/database_initialize.py,src/run.py,src/build.py,src/config/__init__.py,src/document/__init__.py
