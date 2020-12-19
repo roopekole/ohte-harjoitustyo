@@ -125,9 +125,7 @@ def save_file(project,customer,file, long_file_name):
     Returns:
 
     """
-    if not check_file_type(file):
-        raise InvalidDataEntry('')
-
+    
     document = Document(project, customer, file)
 
     document.document_id = upload_document_to_db(document)
