@@ -17,4 +17,5 @@
 | 7.12   | 3  | Designin mock-tests to unit test database and indexing functions |
 | 14.12  | 2  | Application architecture documentation and refactoring |
 | 15.12  |  4 | Refactoring (getting rid of hardcodings), improving test coverage |
-| tot   | 63  |  | 
+| 19.12  |  3 | Applying error processing and consequential refactoring, pylint fixes, documentation |
+| TOT   | 66  |  | 

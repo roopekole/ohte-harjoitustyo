@@ -4,6 +4,75 @@ import tkinter
 import document.document_functions as doc_funcs
 from utilities import background_progress
 
+class MetaDataInputs:
+
+    # pylint: disable=too-many-instance-attributes
+    # pylint: disable=too-many-arguments
+    # All instance attributes and related function arguments are needed
+
+    def __init__(self, upload_class, window, root, file_text, short_filename, long_filename,
+                 instruction_text, progress_bar, start):
+        self.upload = upload_class
+        self.window = window
+        self.root = root
+        self.file_text = file_text
+        self.short_filename = short_filename
+        self.long_filename = long_filename
+        self.instruction_text = instruction_text
+        self.progress_bar = progress_bar
+        self.handle_start = start
+        self.frame = None
+        self.project = None
+        self.customer = None
+
+        self.initialize()
+
+    def initialize(self):
+        self.frame = ttk.Frame(master=self.root)
+        self.file_text.set("Selected file: " + self.short_filename.get())
+
+        project_label = ttk.Label(self.frame, text="Enter the name of the reference project:")
+        project_label.pack(pady=(20, 0))
+        self.project = tkinter.Entry(master=self.frame, width=40)
+        self.project.pack()
+
+        customer_label = ttk.Label(self.frame, text="Enter the name of the customer:")
+        customer_label.pack(pady=(20, 0))
+        self.customer = tkinter.Entry(master=self.frame, width=40)
+        self.customer.pack()
+
+        self.instruction_text.set("Enter the metadata and press save \n"
+                                  "or select a different document file")
+
+        save_file_button = tkinter.Button(self.frame,
+                                          text="SAVE", width=10, height=2, bg="#2B7a78",
+                                          command=self.handle_save_button_click)
+        save_file_button.pack(pady=20)
+
+    def handle_save_button_click(self):
+        """Processes the Save button click after file has been selected and
+        information has been entered.
+
+        """
+        try:
+            self.instruction_text.set("Uploading")
+            doc_funcs.save_file(self.project.get(), self.customer.get(),
+                                self.short_filename.get(), self.long_filename.get())
+
+            background_progress.show_progress(self.window, self.progress_bar)
+
+            self.upload.destroy()
+            self.handle_start()
+        except doc_funcs.InvalidDataEntry:
+            self.instruction_text.set('Invalid data - please check and try again!')
+
+    def pack(self):
+        self.frame.pack(fill=constants.X)
+
+    def destroy(self):
+        self.frame.destroy()
+
+
 class UploadView:
 
     # pylint: disable=too-many-instance-attributes
@@ -31,71 +100,45 @@ class UploadView:
         self.instruction_text = None
         self.progress_bar = None
         self.file_text = None
+        self.metadata_view = None
+        self.metadata_frame = None
 
         self.initialize()
 
-
-    def check_file_type(self, file):
-        """
-
-        Args:
-            file: File selected by the application user
-
-        Returns: True if file is PDF file, else False
-
-        """
-        return str(file[-4:]).lower() == ".pdf"
 
     def handle_upload_button_click(self):
         """ Processes the Select file button click.
 
         """
         filename = filedialog.askopenfilename()
+        self.long_filename.set(filename)
+        try:
+            self.process_loaded_file()
+        except doc_funcs.InvalidDataEntry:
+            self.instruction_text.set('File type incorrect - select a PDF file')
 
-        if not self.check_file_type(filename):
-            # pylint: disable=fixme
-            # TODO: one can work around the check,
-            #  by selecting PDF first and then other file type
-            self.instruction_text.set("You must select a PDF file type!")
 
-        if filename and self.check_file_type(filename):
+    def process_loaded_file(self):
+        if self.metadata_view is not None:
+            self.file_text.set("")
+            self.metadata_view.destroy()
 
-            self.short_filename.set(path.basename(filename))
-            self.long_filename = filename
+        self.short_filename.set(path.basename(self.long_filename.get()))
+        if not doc_funcs.check_file_type(self.short_filename.get()):
+            raise doc_funcs.InvalidDataEntry('')
 
-            self.file_text.set("Selected file: " + self.short_filename.get())
-
-            project_label = ttk.Label(self.frame, text="Enter the name of the reference project:")
-            project_label.pack(pady=(20,0))
-            self.project = tkinter.Entry(master=self.frame, width=40)
-            self.project.pack()
-
-            customer_label = ttk.Label(self.frame, text="Enter the name of the customer:")
-            customer_label.pack(pady=(20,0))
-            self.customer = tkinter.Entry(master=self.frame, width=40)
-            self.customer.pack()
-
-            self.instruction_text.set("Enter the metadata and press save \n"
-                                      "or select a different document file")
-
-            save_file_button = tkinter.Button(self.frame,
-                                              text="SAVE", width=10, height=2, bg="#2B7a78",
-                                                command=self.handle_save_button_click)
-            save_file_button.pack(pady=20)
-
-    def handle_save_button_click(self):
-        """Processes the Save button click after file has been selected and
-        information has been entered.
-
-        """
-        self.instruction_text.set("Uploading")
-        doc_funcs.save_file(self.project.get(), self.customer.get(),
-                                     self.short_filename.get(), self.long_filename)
-
-        background_progress.show_progress(self.root, self.progress_bar)
-
-        self.destroy()
-        self.handle_start()
+        self.metadata_view = MetaDataInputs(
+            self,
+            self.root,
+            self.metadata_frame,
+            self.file_text,
+            self.short_filename,
+            self.long_filename,
+            self.instruction_text,
+            self.progress_bar,
+            self.handle_start
+        )
+        self.metadata_view.pack()
 
     def initialize(self):
         """ Initializes the Upload view
@@ -110,6 +153,9 @@ class UploadView:
                                                        "\n to be stored")
 
         self.file_text = StringVar()
+
+        self.long_filename = StringVar()
+        self.long_filename.set("")
 
         self.frame = ttk.Frame(master=self.root)
         self.frame_footer = ttk.Frame(master=self.root)
@@ -156,4 +202,6 @@ class UploadView:
 
     def destroy(self):
         self.frame.destroy()
+        if self.metadata_view:
+            self.metadata_view.destroy()
         self.frame_footer.destroy()

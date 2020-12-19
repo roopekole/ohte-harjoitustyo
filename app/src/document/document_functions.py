@@ -2,9 +2,9 @@ import os
 import re
 from whoosh import index
 from whoosh.qparser import QueryParser
-from config import database_connect as db_conn
 from document.document import Document
 from utilities import pdf_parser
+from config import database_connect as db_conn
 from config.whoosh_config import Config
 from config.file_storage_config import DOCUMENT_FILEPATH
 
@@ -125,6 +125,9 @@ def save_file(project,customer,file, long_file_name):
     Returns:
 
     """
+    if not check_file_type(file):
+        raise InvalidDataEntry('')
+
     document = Document(project, customer, file)
 
     document.document_id = upload_document_to_db(document)
@@ -153,3 +156,18 @@ def download_file(doc_id, directory):
     newfile = open(save_path, "w+b")
     newfile.write(open(file_path, "r+b").read())
     newfile.close()
+
+def check_file_type(file):
+    """
+
+    Args:
+        file: File selected by the application user
+
+    Returns: True if file is PDF file, else False
+
+    """
+    return str(file[-4:]).lower() == ".pdf"
+
+
+class InvalidDataEntry(Exception):
+    pass

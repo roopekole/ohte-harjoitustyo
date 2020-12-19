@@ -1,6 +1,5 @@
 import os
 from shutil import rmtree
-from whoosh import index
 from config.file_storage_config import DOCUMENT_FILEPATH
 
 def initialize_doc_storage():

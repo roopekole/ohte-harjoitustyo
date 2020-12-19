@@ -4,7 +4,7 @@
 
 The application conforms to two-layered architectural design:
 
-![Package diagram](./package_diagram.jpg)
+![Package diagram](./images/package_diagram.jpg)
 
 Package _ui_ comprises of the graphical user interface logic. Package _document_ contains the data access objects including storage and search functions for document class. If more class objects are added (such as _user_ class which is considered an extension in application requirements) those are added as separate packages. 
 
@@ -45,3 +45,19 @@ The storage related server processes are initiated by user request. The metadata
 
 
 ## Major features
+
+## Known issues
+
+### User interface
+User interface contains duplicated code in the footer. Footer should be generated from its own module and changed dynamically in each of the views. Repeating the footer now results in some Pylint warnings and additional arguments in user interface classes.
+
+### Document upload
+Document upload failure error message shown to user is not explicit. Moreover, metadata entries are not required and may be left blank without any errors.
+
+### Document browse
+Document browsing view is somewhat messy as the columns are not fixed and instead the column lenght varies with field lenght.
+
+Pagination is missing and today after approximately 20 documents the user interface starts losing elements.
+
+### Document search
+Search only applies to the document content - not metadata. Search listing becomes somewhat messy since the list columns vary with data. Large amount of search results limits the usability.

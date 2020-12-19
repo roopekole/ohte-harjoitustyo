@@ -1,4 +1,4 @@
-# User manual
+﻿# User manual
 
 Download the source code of the latest [release](https://github.com/roopekole/ohte-harjoitustyo/releases/) by selecting expanding _Assets_ and clicking _Source code_ (.zip or tar.gz).
 

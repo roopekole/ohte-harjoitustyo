@@ -1,14 +1,11 @@
 from config.database_initialize import initialize_database
 from config.whoosh_initialize import initialize_index
 from config.file_storage_initialize import initialize_doc_storage
-from config.file_storage_config import DOCUMENT_FILEPATH
 
 def build():
     initialize_database()
     initialize_index()
     initialize_doc_storage()
-
-
 
 
 
