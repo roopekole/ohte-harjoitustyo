@@ -29,6 +29,9 @@ There are two user groups:
 	- Search score is displayed to the user, BM25F scoring algorithm used
 - User may download the selected document (searched or browsed) to the selected directory
 
+**Usability and GUI**
+- Progress animation is shown to user during uploads and downloads
+
 ### The extensions
 
 **Maintenance**
@@ -52,5 +55,4 @@ There are two user groups:
 
 
 **Usability and GUI**
-- Progress animation is shown to user during uploads and downloads (done as of 5.12.2020)
 - Allow user to include keyword hit preview
