@@ -151,7 +151,7 @@ def download_file(doc_id, directory):
 
     """
     doc = get_document_from_db(doc_id)
-    file_path = "file_storage/" + str(doc_id)
+    file_path = DOCUMENT_FILEPATH + "/" + str(doc_id)
     save_path = os.path.join(directory + "/" + doc.file)
     newfile = open(save_path, "w+b")
     newfile.write(open(file_path, "r+b").read())

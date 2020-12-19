@@ -4,7 +4,7 @@ import document.document_functions as docfuncs
 from document.document import Document
 from config.whoosh_config import Config
 from whoosh.fields import Schema, ID, TEXT
-from config import database_connect, database_config, database_initialize
+from config import database_connect
 from utilities import pdf_parser
 
 class TestFunctions(unittest.TestCase):
@@ -67,8 +67,17 @@ class TestFunctions(unittest.TestCase):
 
     def test_downloading_file(self):
         # "Download" file to test storage and assert the parsed content
+        if not os.path.exists("src/tests/test_doc_files"):
+            os.mkdir("src/tests/test_doc_files")
+            filename = "src/tests/test_doc_files/2"
+            newfile = open(filename, "w+b")
+            newfile.write(open("src/tests/test_upload_files/2", "r+b").read())
+            newfile.close()
+
         docfuncs.download_file(2, "src/tests/test_upload_files/download/")
         downloaded_content = pdf_parser.parse_pdf("src/tests/test_upload_files/download/sample2.pdf")
         self.assertEqual(downloaded_content[:28], "Aeque enim contingit omnibus")
         os.remove("src/tests/test_upload_files/download/sample2.pdf")
+        os.remove("src/tests/test_doc_files/2")
+        os.rmdir("src/tests/test_doc_files")
 
