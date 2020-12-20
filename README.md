@@ -72,6 +72,8 @@ python3 -m pipenv run coverage-report
 
 Report is generated to *htmlcov* directory.
 
+Configurations are set in file [.coveragerc](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/.coveragerc).
+
 ### Pylint
 
 Pylint code analysis can be initated:
@@ -80,4 +82,4 @@ Pylint code analysis can be initated:
 python3 -m pipenv run lint
 ```
 
-Configurations are set in file [.pylintrc](./.pylintrc).:
+Configurations are set in file [.pylintrc](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/.pylintrc).
