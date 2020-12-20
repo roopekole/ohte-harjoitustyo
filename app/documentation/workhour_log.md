@@ -19,4 +19,5 @@
 | 15.12  |  4 | Refactoring (getting rid of hardcodings), improving test coverage |
 | 19.12  |  3 | Applying error processing and consequential refactoring, pylint fixes, documentation |
 | 19.12 (pt.2)  |  4 | Fixing the testing, documenting for final submission |
-| TOT   | 70  |  | 
+| 20.12 |  5 | Architectural documentation |
+| TOT   | 75  |  | 
