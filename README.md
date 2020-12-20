@@ -20,8 +20,8 @@ Application has been developed and tested with Python version
 - [Test documentation](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/test_document.md)
 - [Workhour log](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md)
 
-## Release
-[First release](https://github.com/roopekole/ohte-harjoitustyo/releases/tag/viikko5)
+## Current release
+[Final release](https://github.com/roopekole/ohte-harjoitustyo/releases/tag/v1.0)
  
 
 ## Get started
