@@ -10,7 +10,7 @@ DATABASE_FILENAME=database.sqlite
 ```
 (Whoosh indices are automatically stored to directory *indexfiles* and physical files are automatically stored to directory *file_storage*.
 
-## Ohjelman käynnistäminen
+## Running the application
 
 Before running the application, depedency installation is required:
 
@@ -63,7 +63,7 @@ Browse view displays the project, customer and original file name information fo
 
 Browse view allows user to download any file to his / her computer. Pressing download button asks user to specify the selected target directory and saves the file with the original file name.
 
-## searching the documents
+## Searching the documents
 
 Stored documents can be searched through search view
 

@@ -54,19 +54,35 @@ The storage related server processes are initiated by user request. The metadata
 
 ### Document and indexing files
 
+The physical file storage and index file storage are defined in the application configuration (see [.env](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/.env) files). Both directories are initialized during the application build.
 
+The physical file storage stores the file binary. The files are titled with the database id that corresponds to the file. If user downloads the file, the file is stored to the user selected folder with the original name.
+
+The indexing files are standard Whoosh library index files. They index the content of the document and also store the document for displaying the highlighted hits. Indexing (consequential querying) is configurable, however, there are hardcoded references in the source code to all the Whoosh [schema](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/config/whoosh_config.py#L13) attributes and hence only additional attributes should be considered.  
 
 ## Major features
 
-Two of the main features are depicted below as sequence diagrams
+Two of the main features are depicted below as sequence diagrams. Note that downloading from the _browse view_ is logically analogous to download from _search view_ and hence separate diagram has not been drawn.
+
 
 **Upload document with the metadata**
 
+The below sequence diagram describes the logical events after user has clicked "Select a file" button and selected the file to be uploaded on the upload view of the user interface:
+
 ![Upload diagram](./images/upload_sequence.png)
+
+Assuming that the file type is allowed (.pdf), the user interface constructs and initializes the view defined by the [MetaDataInputs](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/ui/upload_view.py#L7) class. After user has entered the metadata for the document, the _UI_ class calls the [save_file](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L117) function of the _document_functions_ module. Then, a [document object](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document.py#L2) is constructed and that object is first stored to metadata database with [upload_document_to_db](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document.py#L2) function of the _document_functions_ module. Finally the document is indexed to Whoosh index with [upload_to_index](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L99) function of the same module. Finally user is returned to start view _show_start_view_ function of the _UI_ class. (Note! Whoosh indexing related sequencing is not displayed in the diagram).
+
 
 **Search and download**
 
+The below sequence diagram describes the logical events after user has entered some search string (e.g. "string") on the search view of the user interface which yields a hit in the indexed text content:
+
 ![Download diagram](./images/search_and_download_sequence.png)
+
+Clicking search on the _search_view_ of the user interface, the _UI_ class calls the [search](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L25) function of the _document_functions_ module. The search returns a _Whoosh_ query _Hit object_ for _UI_. After receiving the hit object, for each hit, _UI_ calls the [get_document_from_db](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L62) function to get the related metadata for the indexed content. This function constructs a _Document_ object for each hit and metadata combination and returns this class object to _UI_. _UI_ then calls the [modify_highlight](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L11) of _document_functions_ module to visually highlight the search string hits with the content. Properly highlighted content is returned for _UI_. 
+
+Then user can download the related document from the file storage to his / her own harddrive by clicking download button. Download button pops up a dialog requesting a folder to transfer the selected file. After the folder has been selected _UI_ calls the [download_file](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py#L141) function of the _document_functions_ module with the selected folder and database id as parameters. The file is stored with the original name by constructing the _Document_ class object by querying the metadata from the database with _get_document_from_db_ with _doc_id_ as parameter. Finally the file is written to the user's harddrive. 
 
 ## Known issues
 
