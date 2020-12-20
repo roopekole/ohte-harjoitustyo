@@ -6,18 +6,30 @@ The application conforms to two-layered architectural design:
 
 ![Package diagram](./images/package_diagram.jpg)
 
+The first layer is the user interface layer isolated from the software logic. The second layer contains the software logical components. Each package in the layer conforms to the logical entity of the software such as document and user and the necessary functions related to the entity (design principle learned on the course *Aineopintojen harjoitustyö: Tietokantasovellus*).
+
 Package _ui_ comprises of the graphical user interface logic. Package _document_ contains the data access objects including storage and search functions for document class. If more class objects are added (such as _user_ class which is considered an extension in application requirements) those are added as separate packages. 
 
-Additionaly, package _config_ contains the application configuration files.
+Additionaly, package _config_ contains the application configuration files and _utilities_ contains utility modules with utility functions.
 
 
 ## Software logic
 
 The logical data structure of the software is comprised of the [Document](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document.py) class. The Document class is intertwined with the [document functions](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py) module which contains the storage, indexing, querying, uploading and downloading functions for document object.
 
-The application could be easily extended for instance with the user class (see layer structure) to allow maintenance via GUI. The user class is considered an extension to the lab project scope.
+### Document entity
 
-The application could also be extended to link customers and projects, which are now free text entries, as object entities to the document. However, this type of data structural logic is considered uncharacteristic for the scope and hence not implemented.
+The logical features of the base functionalities are contained in the _document_ package which comprises of document entity related logic. The [document functions](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/src/document/document_functions.py) module provides user interface with the necessary functions such as:
+- `save_file(project, customer, file, long_file_name)` to upload the file and the related metadata
+- `get_all_documents_from_db` to browse all stored data
+- `search(search_string, limit)` to perform the full text search
+- `download_file(doc_id, directory)` to download the desired file to the selected directory on the user's harddrive
+
+### Other entities
+
+The application could be easily extended for instance with the user class (see package structure diagram) to allow maintenance via GUI. The user class is considered an extension to the lab project scope.
+
+The application could also be extended to link customers (described as a separate module in above package diagram) and projects, which are now free text entries, as object entities to the document. However, this type of data structural logic is considered uncharacteristic for the scope and hence not implemented.
 
 
 ## Graphical user interface
@@ -45,6 +57,16 @@ The storage related server processes are initiated by user request. The metadata
 
 
 ## Major features
+
+Two of the main features are depicted below as sequence diagrams
+
+**Upload document with the metadata**
+
+![Upload diagram](./images/upload_sequence.png)
+
+**Search and download**
+
+![Download diagram](./images/search_and_download_sequence.png)
 
 ## Known issues
 

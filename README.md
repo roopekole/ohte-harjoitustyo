@@ -15,9 +15,10 @@ Application has been developed and tested with Python version
 ## Documentation
 
 - [User manual](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/user_manual.md)
-- [Application requirements](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/application_requirements.md)
-- [Workhour log](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md)
 - [Software architecture](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/software_architecture.md)
+- [Application requirements](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/application_requirements.md)
+- [Test documentation](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/test_document.md)
+- [Workhour log](https://github.com/roopekole/ohte-harjoitustyo/blob/master/app/documentation/workhour_log.md)
 
 ## Release
 [First release](https://github.com/roopekole/ohte-harjoitustyo/releases/tag/viikko5)
